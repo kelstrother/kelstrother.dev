@@ -4,6 +4,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
+    // "site": "portfolio-projects-78b86",
     "public": "dist",
     "ignore": [
       "firebase.json",

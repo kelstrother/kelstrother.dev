@@ -1,6 +1,6 @@
 <template>
   <div class="title">
-    <p class="title-skills">skills</p>
+    <h1 class="title-skills">skills</h1>
   </div>
   <section class="skills-container" id="skillslink">
     <div class="skill-icon">
@@ -100,7 +100,7 @@
         class="icon"
         src="../assets/icon/iconfinder_ruby-on-rails_3069735.png"
       />
-      <p class="skill">Ruby on Rails</p>
+      <p class="skill" id="ror">Ruby on Rails</p>
     </div>
   </section>
 </template>
@@ -121,8 +121,8 @@ export default {};
 .skill-icon {
   align-items: center;
   justify-content: center;
-  height: 7em;
-  width: 8em;
+  height: 5em;
+  width: 6em;
   padding: 0.3em;
   margin: 0.4em;
   background-color: transparent;
@@ -133,14 +133,18 @@ export default {};
   border-radius: 7px;
   margin-top: 0.2em;
   padding: 0;
-  height: 4.2rem;
-  width: 4.2rem;
+  height: 2.5rem;
+  width: 2.5em;
 }
 .skill {
   border-top: 2px groove rgba(77, 100, 134, 0.2);
-  padding: 0 0.2em;
+  /* padding: 0 0.2em; */
   margin: 0.2em 0.1em;
-  font-weight: 500;
+  /* font-weight: 500; */
+  font-size: 0.8rem;
+}
+#ror {
+  font-size: 0.7rem;
 }
 #sass {
   background-color: rgba(87, 153, 197, 1);

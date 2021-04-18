@@ -1,6 +1,5 @@
 <template>
   <section class="contact-container">
-     <h1 class="title">contact</h1>
     <div class="grabber">
       <img
         src="../assets/img/background@2x.png"
@@ -9,6 +8,7 @@
       />
     </div>
     <div class="form-container" id="contactme">
+      <h2 class="title">contact.me</h2>
       <form action="https://formspree.io/f/mrgooljj" method="POST">
         <label>Name</label>
         <input class="textfield" type="text" name="name" />
@@ -28,29 +28,30 @@ export default {};
 
 <style scoped>
 .contact-container {
-  /* background-color: #0b0c10; */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .grabber {
   width: 100vw;
-  margin-top: 2em;
-  /* background-color: #0b0c10; */
+  /* margin-top: 2em; */
   color: #fff;
+}
+.title {
+  font-size: 2rem;
+  margin: 0;
 }
 .guitars {
   width: 80vw;
 }
 #contactme {
-  /* background-color: #0b0c10; */
   width: 100vw;
 }
 form {
   display: flex;
   flex-direction: column;
   max-width: 40em;
-  margin: 30px auto;
+  margin: 0 auto;
   text-align: left;
   padding: 1.5em;
   border-radius: 6px;
@@ -58,7 +59,7 @@ form {
 label {
   color: #378094;
   display: inline-block;
-  margin: 25px 0 15px;
+  margin: 1em 0 1em;
   font-size: 1em;
   letter-spacing: 1px;
   font-weight: bold;
@@ -82,7 +83,7 @@ input {
 }
 button {
   width: 8em;
-  margin: 0em 0 4em 0;
+  margin-bottom: 4em;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 1em;

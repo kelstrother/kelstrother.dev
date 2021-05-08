@@ -1,17 +1,26 @@
 <template>
   <div class="home">
     <div class="name-container">
-      <h1 class="name">Kel Strother</h1>
+      <img class="name" id="first" src="../../public/slice3.png" alt="" />
+      <img class="name" id="last" src="../../public/slice2.png" alt="" />
     </div>
     <div class="job-title">
-      <h2>Software Engineer</h2>
-      <h3 class="location">Denver, <span class="state">Colorado</span></h3>
+      <h2>
+        Web <br /><span class="dev">Dev<span class="eloper">eloper</span></span>
+      </h2>
+    </div>
+    <br />
+    <p class="outof">out of</p>
+    <div class="city-container">
+      <h3 class="location">
+        <span class="denver">Denver,</span> <br />
+        <span class="C"> C</span><span class="O">O</span>
+      </h3>
     </div>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "Home",
 };
@@ -21,74 +30,157 @@ export default {
 .home {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin-bottom: 2em;
   height: 100vh;
   width: 100vw;
 }
 .name-container {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  height: 20vh;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items:center;
-  animation: tracking-in-expand-fwd 3s ease;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+}
+img {
+  padding: 0;
+  margin: 0;
+}
+#first {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  /* animation: tracking-in-expand-fwd 4s ease-in; */
+  padding: 0;
+}
+#last {
+  position: absolute;
+  top: 135px;
+  left: 10px;
+  padding: 0;
 }
 .name-img {
   height: 60px;
   width: 550px;
-  opacity: .7;
-}
-.name {
-  position: relative;
-  top: -200px;
-  margin: 0.2em;
-  font-family: "Coda Caption", sans-serif;
-  font-weight: 100;
-  font-size: 3.2em;
-}
-.tracking-in-expand-fwd {
-	-webkit-animation: tracking-in-expand-fwd 1.3s cubic-bezier(0.115, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand-fwd 1.3s cubic-bezier(0.115, 0.610, 0.355, 1.000) both;
-}
-@-webkit-keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
-}
-@keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-700px);
-            transform: translateZ(-700px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-            transform: translateZ(0);
-    opacity: 1;
-  }
+  opacity: 0.7;
 }
 .job-title {
-  margin-top: 2rem;
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.7rem;
+  -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
+  color: rgba(255, 255, 255, 0);
+}
+span.dev {
+  position: relative;
+  left: 25%;
+  text-align: right;
+}
+span.eloper {
+  animation: flicker-in-1 4s;
+  animation-delay: .3s;
+}
+h2 {
+  text-align: left;
+}
+.outof {
+  position: absolute;
+  top: 60%;
+  font-size: 1.2rem;
+  color: rgba(127, 255, 212, 0.685);
+  -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  padding: 2rem;
+  /* opacity: .8; */
+  animation: soft-blink 5s ease-in-out;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+  animation-fill-mode: both;
 }
 .location {
-  margin-top: 3em;
-  animation: flicker-in-1 2.5s;
+  position: absolute;
+  bottom: 15%;
+  left: 20%;
+  text-align: left;
+  padding-bottom: 2em;
+  font-size: 1.9rem;
+  color: rgba(169, 231, 255, 0.637);
+  -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+  animation: tracking-in-expand-fwd 3s ease;
+  /* animation: flicker-in-1 2.5s; */
+}
+.city-container {
+  animation: appear 2s ease-in-out;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+}
+span.C {
+  position: absolute;
+  left: 80%;
+  z-index: 5;
+  font-size: 2.2rem;
+  -webkit-text-stroke: 1px rgb(207, 20, 20);
+  color: rgb(197, 18, 18);
+  animation: fill-c 3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 4.5s;
+}
+span.O {
+  position: absolute;
+  font-size: 2.2rem;
+  left: 103%;
+  z-index: 1;
+  color: transparent;
+  animation: float-left 3s ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 4.5s;
+}
+@keyframes soft-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .8;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes float-left {
+  from {
+    color: rgba(169, 231, 255, 0.637);
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+  }
+  to {
+    color: rgba(253, 189, 28, 0.822);
+    -webkit-text-stroke: 1px rgb(197, 18, 18);
+  }
+}
+@keyframes fill-c {
+  from {
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+    color: rgba(169, 231, 255, 0.637);
+  }
+  to {
+    -webkit-text-stroke: 1.2px rgba(255, 255, 255, 0.747);
+    color: rgba(218, 26, 26, 0.774);
+  }
 }
 .flicker-in-1 {
   -webkit-animation: flicker-in-1 2s linear 2s forwards;
@@ -283,5 +375,93 @@ export default {
   100% {
     opacity: 1;
   }
+}
+
+@media screen and (min-width: 700px) {
+  .name-container {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#first {
+  position: relative;
+  top: 100px;
+  left: -20px;
+  height: 12rem;
+  padding: 0;
+}
+#last {
+  position: absolute;
+  top: 135px;
+  left: 110%;
+  padding: 0;
+  height: 12rem;
+}
+.job-title {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 4rem;
+  -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
+}
+.outof {
+  top: 70%;
+  left: 50%;
+  font-size: 2.5rem;
+  color: rgba(127, 255, 212, 0.685);
+  -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+}
+.location {
+  bottom: 5%;
+  left: 70%;
+  padding-bottom: 1em;
+  font-size: 5.5rem;
+  color: rgba(169, 231, 255, 0.637);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+span.C {
+  font-size: 5.5rem;
+}
+span.O {
+  font-size: 5.5rem;
+  left: 100%;
+}
+}
+
+@media screen and (min-width: 1000px) {
+  #first {
+    top: 40px;
+    left: -90%;
+  }
+  #last {
+    left: 15%;
+  }
+  .job-title {
+  top: 40%;
+  left: 10%;
+  font-size: 3rem;
+}
+.location {
+  bottom: 10%;
+  left: 60%;
+  font-size: 4rem;
+}
+.outof {
+  top: 70%;
+  left: 30%;
+  font-size: 2.5rem;
+}
+span.O {
+  left: 105%;
+}
 }
 </style>

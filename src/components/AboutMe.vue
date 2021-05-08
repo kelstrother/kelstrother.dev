@@ -1,6 +1,6 @@
 <template>
-<div class="shape-1"></div>
-<div class="shape-2"></div>
+<!-- <div class="shape-1"></div> -->
+<!-- <div class="shape-2"></div> -->
   <div class="container">
     <h1 class="title" id="about.me">about.me</h1>
     <section class="myself">
@@ -50,12 +50,18 @@ export default {};
   align-items: center;
 }
 .title {
-  z-index: 10;
+  color: rgba(87, 153, 197, 1);
+  -webkit-text-stroke: 1px goldenrod;
+  font-size: 2.5em;
+  font-weight: 900;
 }
 #about.me {
   margin-bottom: 1em;
 }
 .biography {
+  font-family: "Poppins";
+  color: rgba(87,153,197,1);
+  font-weight: 400;
   margin: 1em 2em;
   font-size: 0.9em;
   max-width: 700px;

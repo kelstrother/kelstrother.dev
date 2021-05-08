@@ -8,7 +8,7 @@
       />
     </div>
     <div class="form-container" id="contactme">
-      <h2 class="title">contact.me</h2>
+      <!-- <h2 class="title">contact.me</h2> -->
       <form action="https://formspree.io/f/mrgooljj" method="POST">
         <label>Name</label>
         <input class="textfield" type="text" name="name" />
@@ -28,18 +28,24 @@ export default {};
 
 <style scoped>
 .contact-container {
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 .grabber {
   width: 100vw;
   /* margin-top: 2em; */
+  margin: 0;
+  padding: 0;
   color: #fff;
 }
 .title {
-  font-size: 2rem;
-  margin: 0;
+  color: rgba(87, 153, 197, 1);
+  -webkit-text-stroke: 1px goldenrod;
+  font-size: 2.5rem;
+  margin-top: -.5rem;
 }
 .guitars {
   width: 80vw;
@@ -53,16 +59,16 @@ form {
   max-width: 40em;
   margin: 0 auto;
   text-align: left;
-  padding: 1.5em;
+  padding: 1em;
   border-radius: 6px;
 }
 label {
   color: #378094;
   display: inline-block;
-  margin: 1em 0 1em;
+  margin: .5em 0 .5em;
   font-size: 1em;
   letter-spacing: 1px;
-  font-weight: bold;
+  font-weight: 500;
 }
 input {
   color: rgba(255, 255, 255, 0.7);

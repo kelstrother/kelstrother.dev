@@ -109,20 +109,24 @@
 export default {};
 </script>
 
-<style scoped>
+<style>
+.title-skills {
+  padding-top: 1em;
+  color: rgba(87, 153, 197, 1);
+  -webkit-text-stroke: 1px goldenrod;
+  font-size: 2.5rem;
+}
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 0 auto;
-  max-width: 900px;
+  margin: 1rem auto;
+  /* margin-bottom: 3.5rem; */
+  
+  max-width: 800px;
 }
 .skill-icon {
-  align-items: center;
-  justify-content: center;
-  height: 5em;
-  width: 6em;
   padding: 0.3em;
   margin: 0.4em;
   background-color: transparent;
@@ -138,17 +142,34 @@ export default {};
 }
 .skill {
   border-top: 2px groove rgba(77, 100, 134, 0.2);
-  /* padding: 0 0.2em; */
+  color: rgba(87,153,197,1);
+  font-weight: 400;
   margin: 0.2em 0.1em;
-  /* font-weight: 500; */
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 #ror {
-  font-size: 0.7rem;
+  font-size: 1rem;
 }
 #sass {
   background-color: rgba(87, 153, 197, 1);
   border-radius: 5px;
   border: none;
+}
+
+@media screen and (min-width: 700px) {
+  .skills-container {
+    width: 80vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .title-skills {
+    padding-top: 3rem;
+    font-size: 3rem;
+  }
+  .skill-icon {
+    padding: 1rem;
+  }
 }
 </style>

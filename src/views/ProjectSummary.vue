@@ -1,24 +1,24 @@
 <template>
   <div class="error" v-if="error">{{ error }}</div>
+  <div class="project-name">
+    <h1>{{ project.name }}</h1>
+  </div>
   <div v-if="project" class="project-details">
-    <div class="project-name">
-      <h1>{{ project.name }}</h1>
+    <div class="video-container">
+      <video autoplay loop>
+        <source class="video" :src="project.video" />
+      </video>
     </div>
-      <div class="video-container">
-        <video autoplay loop>
-          <source class="video" :src="project.video" />
-        </video>
-      </div>
+    <div class="project-info">
+      <p class="details">{{ project.details }}</p>
       <div class="btn-container">
-      <a class="live-link" :href="project.live" target="_blank"
+        <a class="live-link" :href="project.live" target="_blank"
           >The Project</a
         >
         <a class="git-link" :href="project.github" target="_blank"
           >The Github</a
         >
-        </div>
-      <div class="project-info">
-        <p class="details">{{ project.details }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -35,18 +35,20 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  height: 100vh;
+}
 .project-name {
-   transform: rotate(-10deg);
-   color: #c9cdd1;
-   margin-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  color: #c9cdd1;
+  margin-top: 8em;
 }
 .project-details {
   display: flex;
-  flex-direction: column;
-  margin-top: 2em;
-  /* justify-content: space-between; */
+  justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  margin-top: 2rem;
 }
 .video-container {
   display: flex;
@@ -54,12 +56,11 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   z-index: 25;
-  transform: rotate(-10deg);
   background-color: rgba(0, 0, 0, 0.8);
 }
 video {
   height: 30vh;
-  opacity: .6;
+  opacity: 0.6;
   border-radius: 7px;
   z-index: -5;
 }
@@ -68,12 +69,12 @@ video {
   max-width: 450px;
 }
 .project-info {
-   margin-top: 3em;
+  color: rgba(87, 153, 197, 1);
+  margin-top: 3em;
 }
 .btn-container {
-   display: flex;
-   transform: rotate(-10deg);
-   margin-top: 1em;
+  display: flex;
+  margin-top: 2em;
 }
 .live-link,
 .git-link {

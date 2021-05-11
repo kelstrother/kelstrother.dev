@@ -1,8 +1,14 @@
 <template>
   <div class="home">
     <div class="name-container">
-      <img class="name" id="first" src="../../public/slice3.png" alt="" />
-      <img class="name" id="last" src="../../public/slice2.png" alt="" />
+      <h1 data-text="Kel" class="f-name">Kel</h1>
+      <p class="fname-2">Kel</p>
+      <p class="fname-3">Kel</p>
+      <h1 data-text="Strother" class="l-name">Strother</h1>
+      <p class="lname-2">Strother</p>
+      <p class="lname-3">Strother</p>
+      <!-- <img class="name" id="first" src="../../public/slice3.png" alt="" />
+      <img class="name" id="last" src="../../public/slice2.png" alt="" /> -->
     </div>
     <div class="job-title">
       <h2>
@@ -37,15 +43,105 @@ export default {
 }
 .name-container {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 20px;
   height: 20vh;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   /* justify-content: space-evenly; */
   align-items: center;
 }
-img {
+.f-name {
+  -webkit-text-stroke: 1.5px rgba(87, 153, 197, 1);
+  z-index: 5;
+  font-size: 3.3rem;
+  letter-spacing: 1.2px;
+  font-weight: 900;
+  /* margin-right: 1rem; */
+  color: transparent;
+}
+.f-name:before,
+.f-name:after {
+  z-index: 4;
+  color: transparent;
+  font-weight: 900;
+  content: attr(data-text);
+  position: absolute;
+  top: 40px;
+  left: 3px;
+  /* transition: 0.2s; */
+}
+.fname-2 {
+  -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
+  font-size: 3.3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: absolute;
+  top: 39px;
+  left: 2px;
+  color: black;
+  /* color: transparent; */
+  z-index: 2;
+}
+.fname-3 {
+  -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
+  font-size: 3.3rem;
+  letter-spacing: 3px;
+  font-weight: 800;
+  position: absolute;
+  top: 42px;
+  left: -1px;
+  color: transparent;
+  z-index: 1;
+}
+.l-name {
+  padding-left: 1.6rem;
+  -webkit-text-stroke: 1.5px rgba(87, 153, 197, 1);
+  z-index: 5;
+  letter-spacing: 1.2px;
+  font-weight: 900;
+  font-size: 3.3rem;
+  color: transparent;
+}
+.l-name:before,
+.l-name:after {
+  padding-left: 1rem;
+  z-index: 4;
+  font-weight: 900;
+  color: transparent;
+  content: attr(data-text);
+  position: absolute;
+  top: 40px;
+  left: 100px;
+  /* transition: 0.2s; */
+}
+.lname-2 {
+  padding-left: 1rem;
+  -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.842);
+  font-size: 3.3rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  position: absolute;
+  top: 39px;
+  left: 100px;
+  color: black;
+  z-index: 2;
+  /* display: none; */
+}
+.lname-3 {
+  padding-left: 1rem;
+  -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
+  font-size: 3.3rem;
+  letter-spacing: 2.5px;
+  font-weight: 800;
+  position: absolute;
+  top: 42px;
+  left: 96px;
+  color: transparent;
+  z-index: 1;
+  /* display: none; */
+}
+/* img {
   padding: 0;
   margin: 0;
 }
@@ -54,19 +150,19 @@ img {
   top: 10px;
   left: 10px;
   /* animation: tracking-in-expand-fwd 4s ease-in; */
-  padding: 0;
+  /* padding: 0;
 }
 #last {
   position: absolute;
   top: 135px;
   left: 10px;
   padding: 0;
-}
-.name-img {
+}  */
+/* .name-img {
   height: 60px;
   width: 550px;
   opacity: 0.7;
-}
+} */
 .job-title {
   position: absolute;
   top: 45%;
@@ -108,14 +204,14 @@ h2 {
 .location {
   position: absolute;
   bottom: 15%;
+  font-weight: 900;
   left: 20%;
   text-align: left;
   padding-bottom: 2em;
   font-size: 1.9rem;
-  color: rgba(169, 231, 255, 0.637);
-  -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(87, 153, 197, 1);
   animation: tracking-in-expand-fwd 3s ease;
-  /* animation: flicker-in-1 2.5s; */
 }
 .city-container {
   animation: appear 2s ease-in-out;

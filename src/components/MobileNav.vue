@@ -1,10 +1,10 @@
 <template>
-  <nav  class="mobile-nav">
+  <div  class="mobile-nav">
     <router-link class="mobile-link" to="/">home</router-link> /
     <router-link class="mobile-link" to="/mywork">my.work</router-link> /
     <router-link class="mobile-link" to="/about">about</router-link> /
     <router-link class="mobile-link" to="/contact">contact</router-link>
-  </nav>
+  </div>
 </template>
 
 <script>
@@ -19,30 +19,38 @@ export default {};
    position: fixed;
    bottom: 0;
    left: 0;
-   color: rgba(87, 153, 197, 1);
-   /* -webkit-text-stroke: 1px rgba(87, 153, 197, 1); */
+   color: transparent;
    justify-content: space-evenly;
+   -webkit-text-stroke: 1.5px rgb(84, 182, 247);
    align-items: center;
    font-family: "Poppins", sans-serif;
+   font-weight: 800;
    width: 100vw;
    height: 10vh;
 }
 .mobile-link {
    text-decoration: none;
-   color: goldenrod;
-   -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
-   /* display: inline-block; */
+   color: transparent;
+   -webkit-text-stroke: 1.5px rgb(84, 182, 247);
+   letter-spacing: 1.3px;
    font-size: 1.2rem;
-   font-weight: 600;
+   font-weight: 900;
    font-family: "Poppins", sans-serif;
 
    &.router-link-exact-active {
-      color: rgb(47, 133, 190);
-      -webkit-text-stroke: 1px rgba(250, 195, 57, 0.747);
-      font-weight: 800;
-      font-size: 1.2rem;
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.726);
+      font-weight: 900;
+      transform: rotate(-5deg);
+      font-size: 1.3rem;
       font-family: "Poppins", sans-serif;
+      transition: .5s ease;
    }
-   
+}
+.mobile-link:hover {
+   color: transparent;
+   -webkit-text-stroke: 2px rgb(84, 182, 247);
+   font-size: 1.3rem;
+
 }
 </style>

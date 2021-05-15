@@ -1,4 +1,5 @@
 <template>
+<div class="wrapper">
   <div class="error" v-if="error">{{ error }}</div>
   <div class="project-name">
     <h1>{{ project.name }}</h1>
@@ -20,6 +21,7 @@
         >
       </div>
     </div>
+  </div>
   </div>
 </template>
 

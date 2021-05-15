@@ -43,17 +43,20 @@ export default {};
 }
 .container {
   height: 100vh;
-  margin-top: 2em;
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 .title {
-  color: rgba(87, 153, 197, 1);
-  -webkit-text-stroke: 1px goldenrod;
+  color: transparent;
+  /* color: rgba(87, 153, 197, 1); */
+  -webkit-text-stroke: 2px rgba(255, 198, 53, 0.575);
+  /* -webkit-text-stroke: 3px rgba(87, 153, 197, 1); */
   font-size: 2.5em;
-  font-weight: 900;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 #about.me {
   margin-bottom: 1em;

@@ -1,13 +1,13 @@
 <template>
 <div class="work-box">
-  <h1 class="title-work">my.work</h1>
+  <!-- <h1 class="title-work">my.work</h1> -->
   <div class="my-work-container">
     <div
       v-for="project in projects"
       :key="project.id"
       class="project-container"
     >
-      <router-link :to="{ name: 'ProjectSummary', params: { id: project.id } }">
+      <router-link target="_blank" :to="{ name: 'ProjectSummary', params: { id: project.id } }">
         <div class="single">
           <h2 class="project-name">{{ project.name }}</h2>
           <img class="project-img" :src="project.image" alt="" />
@@ -36,9 +36,6 @@ export default {
 </script>
 
 <style>
-.my-work-container {
-  /* height: 100vh; */
-}
 .title-work {
   padding-top: 1em;
   color: rgba(87, 153, 197, 1);
@@ -51,8 +48,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-}
-.details-container {
+  margin-top: 5rem;
 }
 .router-links {
   text-decoration: none;
@@ -78,11 +74,13 @@ export default {
 }
 a {
   text-decoration: none;
-  color: #c9cdd1;
+  color: rgba(87, 153, 197, 1);
+  /* -webkit-text-stroke: 1.5px rgba(87, 153, 197, 1); */
 }
 a:hover {
   cursor: pointer;
-  color: rgb(182, 172, 97);
+  /* color: rgb(182, 172, 97); */
+  -webkit-text-stroke: 1.5px rgba(255, 227, 13, 0.322);
 }
 
 @media screen and (min-width: 700px) {
@@ -91,13 +89,13 @@ a:hover {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
   }
   .single {
-    margin: 6rem 0 0 0;
+    margin: 6rem 1rem 0 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
   }
   .project-img {
@@ -114,7 +112,7 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
 }

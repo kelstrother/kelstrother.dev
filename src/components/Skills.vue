@@ -113,7 +113,7 @@ export default {};
 .title-skills {
   padding-top: 1em;
   color: rgba(87, 153, 197, 1);
-  -webkit-text-stroke: 1px goldenrod;
+  /* -webkit-text-stroke: 1px goldenrod; */
   font-size: 2.5rem;
 }
 .skills-container {

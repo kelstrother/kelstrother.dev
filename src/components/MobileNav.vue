@@ -51,6 +51,5 @@ export default {};
    color: transparent;
    -webkit-text-stroke: 2px rgb(84, 182, 247);
    font-size: 1.3rem;
-
 }
 </style>

@@ -36,8 +36,8 @@ export default {};
 }
 .grabber {
   width: 100vw;
-  /* margin-top: 2em; */
-  margin: 0;
+  margin-top: 4em;
+  /* margin: 0; */
   padding: 0;
   color: #fff;
 }

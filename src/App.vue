@@ -4,23 +4,22 @@
   <nav id="desktop-nav">
     <ul class="nav-ul">
       <li>
-        <router-link to="/"
-          ><p data-text="home" class="link">home</p></router-link
+        <router-link to="/" data-text="home" class="link">home</router-link
         >
       </li>
       <li>
         <router-link to="/mywork"
-          ><p data-text="my.work" class="link">my.work</p></router-link
+          data-text="my.work" class="link">my.work</router-link
         >
       </li>
       <li>
         <router-link to="/about"
-          ><p data-text="about.me" class="link">about.me</p></router-link
+          data-text="about.me" class="link">about.me</router-link
         >
       </li>
       <li>
         <router-link to="/contact"
-          ><p data-text="contact" class="link">contact</p></router-link
+          data-text="contact" class="link">contact</router-link
         >
       </li>
     </ul>
@@ -42,6 +41,8 @@ export default {
   background: linear-gradient(rgb(18, 20, 22) 20%, rgb(2, 18, 37) 100%);
   font-family: "Poppins", sans-serif;
   text-align: center;
+  height: 100vh;
+  width: 100vw;
 }
 a {
   text-decoration: none;
@@ -50,7 +51,7 @@ a {
 @media screen and (min-width: 700px) {
 nav {
   position: fixed;
-  height: 15vh;
+  height: 12vh;
   width: 100vw;
   top: 0;
   left: 0;
@@ -59,7 +60,7 @@ nav {
   align-items: center;
   margin: 0;
   padding: 0;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: transparent;
   backdrop-filter: blur(2px);
 }
 ul {
@@ -80,7 +81,13 @@ ul {
   font-size: 1.7rem;
   font-weight: 600;
   text-decoration: none;
+
 }
+  .router-link-exact-active {
+      color: transparent;
+      -webkit-text-stroke: 1.5px rgba(194, 170, 36, 0.562);
+      font-weight: 900;
+  }
 .link:before,
 .link:after {
   content: attr(data-text);
@@ -90,7 +97,6 @@ ul {
   transition: 0.2s;
 }
 .link:hover:before {
-  /* color: rgba(187, 176, 25, .8); */
   z-index: 2;
   -webkit-text-stroke: 2px rgba(33, 182, 219, 0.8);
   transform: translate(5px, -5px);
@@ -113,9 +119,6 @@ ul {
 }
 
 @media screen and (min-width: 1000px) {
-  nav {
-    height: 12vh;
-  }
   .link {
   transform: rotate(15deg);
   font-size: 2rem;

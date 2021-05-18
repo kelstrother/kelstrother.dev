@@ -28,7 +28,6 @@ export default {};
 
 <style scoped>
 .contact-container {
-  margin-top: 5rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -42,8 +41,8 @@ export default {};
   color: #fff;
 }
 .guitars {
-  width: 50vw;
-  height: auto;
+  width: 80vw;
+  height: 100%;
 }
 #contactme {
   width: 100vw;
@@ -60,7 +59,7 @@ form {
 label {
   color: #378094;
   display: inline-block;
-  margin: .5em 0 .5em;
+  margin: 0.5em 0 0.5em;
   font-size: 1em;
   letter-spacing: 1px;
   font-weight: 500;
@@ -99,5 +98,15 @@ button {
 button:hover {
   cursor: pointer;
   -webkit-text-stroke: 1.5px rgb(63, 155, 180);
+}
+
+@media screen and (min-width: 700px) {
+  .contact-container {
+  margin-top: 5rem;
+  }
+  .guitars {
+    width: 50vw;
+    height: auto;
+  }
 }
 </style>

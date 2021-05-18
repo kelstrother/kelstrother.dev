@@ -73,7 +73,7 @@ export default {
   position: absolute;
   top: 38px;
   left: 6px;
-  color: rgba(0, 0, 0, 0.589);
+  color: rgba(0, 0, 0, 0.747);
   z-index: 5;
 }
 .fname-3 {
@@ -118,7 +118,7 @@ export default {
   position: absolute;
   top: 78px;
   left: 22px;
-  color: rgba(0, 0, 0, 0.548);
+  color: rgba(0, 0, 0, 0.719);
   z-index: 5;
   padding-top: 0.5em;
 }
@@ -158,7 +158,7 @@ export default {
   text-align: left;
   font-size: 2.5rem;
   font-weight: 900;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.8px;
   -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
   color: rgba(0, 0, 0, 5);
   z-index: 5;
@@ -188,6 +188,7 @@ span.dev::before {
   color: transparent;
 }
 span.eloper {
+  letter-spacing: 2.2px;
   animation: flicker-in-1 4s;
   animation-delay: 0.3s;
 }
@@ -514,6 +515,12 @@ span.O {
   }
   #name {
     font-size: 4rem;
+  }
+  .fname-2 {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .lname-2 {
+    color: rgba(0, 0, 0, 0.5);
   }
   .job-title {
     position: absolute;

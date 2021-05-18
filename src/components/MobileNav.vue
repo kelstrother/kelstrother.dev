@@ -39,7 +39,7 @@ export default {};
 
   &.router-link-exact-active {
     color: rgb(0, 0, 0);
-    -webkit-text-stroke: 1.5px rgba(33, 219, 219, 0.644);
+    -webkit-text-stroke: 1.5px rgba(33, 219, 219, 0.911);
     font-weight: 900;
     transform: rotate(-5deg);
     font-size: 1.3rem;

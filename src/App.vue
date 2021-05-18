@@ -83,10 +83,11 @@ nav {
     font-size: 1.7rem;
     font-weight: 600;
     text-decoration: none;
+    letter-spacing: 2px;
   }
   .router-link-exact-active {
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgba(194, 170, 36, 0.562);
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 2px rgba(33, 219, 219, 0.644);
     font-weight: 900;
   }
   .link:before,
@@ -122,8 +123,8 @@ nav {
 @media screen and (min-width: 1000px) {
   .link {
     transform: rotate(15deg);
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 900;
   }
 }
 </style>

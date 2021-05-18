@@ -28,6 +28,7 @@ export default {};
 
 <style scoped>
 .contact-container {
+  margin-top: 5rem;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,18 +38,12 @@ export default {};
 .grabber {
   width: 100vw;
   margin-top: 4em;
-  /* margin: 0; */
   padding: 0;
   color: #fff;
 }
-.title {
-  color: rgba(87, 153, 197, 1);
-  -webkit-text-stroke: 1px goldenrod;
-  font-size: 2.5rem;
-  margin-top: -.5rem;
-}
 .guitars {
-  width: 80vw;
+  width: 50vw;
+  height: auto;
 }
 #contactme {
   width: 100vw;
@@ -91,16 +86,18 @@ button {
   width: 8em;
   margin-bottom: 4em;
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 1em;
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
   background-color: rgba(0, 0, 0, 0.3);
-  color: #378094;
+  color: rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 1.5px rgb(59, 131, 151);
   border-radius: 7px;
   border: none;
   padding: 0.5em;
 }
 button:hover {
   cursor: pointer;
-  color: rgb(182, 172, 97);
+  -webkit-text-stroke: 1.5px rgb(63, 155, 180);
 }
 </style>

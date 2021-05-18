@@ -38,8 +38,8 @@ export default {};
   font-family: "Poppins", sans-serif;
 
   &.router-link-exact-active {
-    color: transparent;
-    -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.726);
+    color: rgb(0, 0, 0);
+    -webkit-text-stroke: 1.5px rgba(33, 219, 219, 0.644);
     font-weight: 900;
     transform: rotate(-5deg);
     font-size: 1.3rem;

@@ -12,14 +12,16 @@
     </header>
     <div class="job-title">
       <p class="webdev" data-text="Web">
-        Web <br /><span class="dev" data-text="Dev">Dev<span class="eloper" data-text="eloper">eloper</span></span>
+        Web <br /><span class="dev" data-text="Dev"
+          >Dev<span class="eloper" data-text="eloper">eloper</span></span
+        >
       </p>
     </div>
     <br />
     <p class="outof">out of</p>
     <div class="city-container">
       <p class="location">
-        <span class="denver">Denver,</span><br/>
+        <span class="denver">Denver,</span><br />
         <span class="C">C</span><span class="O">O</span>
       </p>
     </div>
@@ -64,7 +66,7 @@ export default {
   color: transparent;
 }
 .fname-2 {
-  -webkit-text-stroke: 2.5px rgba(66, 219, 219, 0.671);
+  -webkit-text-stroke: 2px rgb(87, 153, 197);
   font-size: 4rem;
   letter-spacing: 2px;
   font-weight: 700;
@@ -75,18 +77,18 @@ export default {
   z-index: 5;
 }
 .fname-3 {
-  -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
+  -webkit-text-stroke: 3px rgba(66, 219, 219, 0.671);
   font-size: 4rem;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 800;
   position: absolute;
-  top: 39px;
+  top: 37px;
   left: 5px;
   color: transparent;
-  z-index: 1;
+  z-index: 4;
 }
 .fname-4 {
-  -webkit-text-stroke: 2px rgb(87, 153, 197);
+  -webkit-text-stroke: 1.5px rgba(228, 121, 34, 0.815);
   font-size: 4rem;
   letter-spacing: 3px;
   font-weight: 800;
@@ -109,7 +111,7 @@ export default {
   padding-top: 0.5em;
 }
 .lname-2 {
-  -webkit-text-stroke: 2.5px rgba(66, 219, 219, 0.671);
+  -webkit-text-stroke: 2px rgb(87, 153, 197);
   font-size: 4rem;
   letter-spacing: 2px;
   font-weight: 700;
@@ -121,19 +123,19 @@ export default {
   padding-top: 0.5em;
 }
 .lname-3 {
-  -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
+  -webkit-text-stroke: 3px rgba(66, 219, 219, 0.671);
   font-size: 4rem;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   font-weight: 800;
   position: absolute;
   top: 79px;
-  left: 20px;
+  left: 18px;
   color: transparent;
-  z-index: 1;
+  z-index: 4;
   padding-top: 0.5em;
 }
 .lname-4 {
-  -webkit-text-stroke: 1.5px rgb(87, 153, 197);
+  -webkit-text-stroke: 1.5px rgba(228, 121, 34, 0.815);
   font-size: 4rem;
   letter-spacing: 1.2px;
   font-weight: 800;
@@ -204,9 +206,9 @@ span.eloper::before {
   top: 57%;
   font-size: 2rem;
   transform: rotate(5deg);
-  color: rgba(127, 255, 212, 0.685);
+  color: rgba(0, 0, 0, 0.795);
   -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
-  font-weight: 600;
+  font-weight: 800;
   letter-spacing: 1.5px;
   padding: 2rem;
   opacity: 0.7;
@@ -226,7 +228,7 @@ span.eloper::before {
 .location {
   padding-bottom: 1.5em;
   font-size: 2.5rem;
-  color: transparent;
+  color: rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 1.5px rgba(87, 153, 197, 1);
   font-weight: 900;
   letter-spacing: 1.4px;
@@ -533,8 +535,11 @@ span.O {
     top: 65%;
     left: 10%;
     font-size: 2rem;
-    color: rgba(127, 255, 212, 0.685);
-    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+    font-weight: 800;
+    /* color: rgba(127, 255, 212, 0.685); */
+    /* color: transparent; */
+    color: rgba(0, 0, 0, 0.5);
+    -webkit-text-stroke: 0.5px rgba(127, 255, 212, 0.795);
   }
   .city-container {
     position: absolute;
@@ -543,7 +548,7 @@ span.O {
   }
   .location {
     font-size: 2.5rem;
-    color: transparent;
+    /* color: transparent; */
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
   }
   span.C {
@@ -560,7 +565,7 @@ span.O {
   }
   .l-name {
     top: -5px;
-    left: 185px;
+    left: 180px;
   }
   .lname-2 {
     top: -5px;
@@ -579,19 +584,19 @@ span.O {
     left: 6%;
   }
   .webdev {
-    font-size: 4.5rem;
+    font-size: 5.5rem;
   }
   .city-container {
     bottom: 10%;
     left: 50%;
   }
   .location {
-    font-size: 4.5rem;
+    font-size: 5rem;
   }
   .outof {
     display: flex;
-    top: 52%;
-    left: 60%;
+    top: 57%;
+    left: 30%;
     font-size: 3.5rem;
   }
   span.O {

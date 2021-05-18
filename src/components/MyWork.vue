@@ -75,11 +75,10 @@ export default {
 a {
   text-decoration: none;
   color: rgba(87, 153, 197, 1);
-  /* -webkit-text-stroke: 1.5px rgba(87, 153, 197, 1); */
 }
 a:hover {
   cursor: pointer;
-  /* color: rgb(182, 172, 97); */
+  color: goldenrod;
   -webkit-text-stroke: 1.5px rgba(255, 227, 13, 0.322);
 }
 

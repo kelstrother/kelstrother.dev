@@ -19,11 +19,6 @@
       </form>
       <button type="submit">Submit</button>
     </div>
-    <section>
-    <p class="copyright">
-      All works &copy; 2020-2021 Kel Strother. All rights reserved.
-    </p>
-  </section>
   </section>
 </template>
 
@@ -91,11 +86,12 @@ button {
   margin-bottom: 4em;
   font-family: "Poppins", sans-serif;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: 2px;
+  filter: brightness(120%);
   background-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 1);
-  -webkit-text-stroke: 1.5px rgb(59, 131, 151);
+  -webkit-text-stroke: 1px rgba(4, 182, 226, 1);
   border-radius: 7px;
   border: none;
   padding: 0.5em;
@@ -107,7 +103,7 @@ button:hover {
 
 @media screen and (min-width: 700px) {
   .contact-container {
-  margin-top: 5rem;
+    margin-top: 5rem;
   }
   .guitars {
     width: 50vw;

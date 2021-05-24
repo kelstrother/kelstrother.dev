@@ -1,4 +1,5 @@
 <template>
+  <SideNav />
   <MobileNav />
   <nav id="desktop-nav">
     <ul class="nav-ul">
@@ -27,8 +28,9 @@
 
 <script>
 import MobileNav from "./components/MobileNav";
+import SideNav from "./components/SideNav";
 export default {
-  components: { MobileNav },
+  components: { MobileNav, SideNav },
 };
 </script>
 
@@ -94,7 +96,7 @@ nav {
   }
   .router-link-exact-active::before {
     z-index: 2;
-    color: rgba(4, 182, 226, .9);
+    color: rgba(4, 182, 226, 0.9);
     filter: brightness(110%);
     -webkit-text-stroke: 2.4px rgba(0, 0, 0, 1);
     transform: translate(4px, -4px);
@@ -102,8 +104,8 @@ nav {
   .router-link-exact-active::after {
     transform: translate(2px, -2px);
     z-index: 1;
-    /* filter: blur(.55px); */
-    -webkit-text-stroke: 2.5px rgba(253, 209, 11, 0.8);
+    -webkit-text-stroke: 1px rgba(255, 189, 6, 0.9);
+    filter: blur(0.8px);
   }
   .link::before,
   .link::after {

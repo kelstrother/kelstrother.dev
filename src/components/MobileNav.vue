@@ -25,6 +25,7 @@ export default {};
   align-items: center;
   width: 100vw;
   height: 10vh;
+  display: none;
 }
 .mobile-link {
   transform: rotate(25deg);

@@ -1,14 +1,15 @@
 <template>
   <div class="home">
     <header class="name-container">
-      <p id="name" class="f-name">Kel</p>
+      <Name />
+      <!-- <p id="name" class="f-name">Kel</p>
       <p id="name" class="fname-2">Kel</p>
       <p id="name" class="fname-3">Kel</p>
       <p id="name" class="fname-4">Kel</p>
       <p id="name" class="l-name">Strother</p>
       <p id="name" class="lname-2">Strother</p>
       <p id="name" class="lname-3">Strother</p>
-      <p id="name" class="lname-4">Strother</p>
+      <p id="name" class="lname-4">Strother</p> -->
     </header>
     <div class="job-title">
       <p class="webdev" data-text="Web">
@@ -29,7 +30,9 @@
 </template>
 
 <script>
+import Name from "../components/Name";
 export default {
+  components: { Name },
   name: "Home",
 };
 </script>

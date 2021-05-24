@@ -19,6 +19,11 @@
       </form>
       <button type="submit">Submit</button>
     </div>
+    <section>
+    <p class="copyright">
+      All works &copy; 2020-2021 Kel Strother. All rights reserved.
+    </p>
+  </section>
   </section>
 </template>
 

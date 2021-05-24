@@ -13,43 +13,37 @@ export default {};
 
 <style lang="scss">
 .mobile-nav {
-  background-color: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(2px);
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
   display: flex;
   position: fixed;
   bottom: 0;
   left: 0;
-  color: transparent;
   justify-content: space-evenly;
-  -webkit-text-stroke: 1.5px rgb(84, 182, 247);
+  padding: 0 1em;
   align-items: center;
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
   width: 100vw;
   height: 10vh;
 }
 .mobile-link {
+  transform: rotate(25deg);
   text-decoration: none;
-  color: transparent;
-  -webkit-text-stroke: 1.4px rgb(84, 182, 247);
-  letter-spacing: 1px;
-  font-size: 1.3rem;
+  -webkit-text-stroke: 1.75px rgba(4, 182, 226, 1);
+  color: rgba(0, 0, 0, 1);
+  letter-spacing: 1.2px;
+  font-size: 1.4rem;
   font-weight: 900;
+  filter: brightness(120%);
   font-family: "Poppins", sans-serif;
 
   &.router-link-exact-active {
-    color: rgb(0, 0, 0);
-    -webkit-text-stroke: 1.5px rgba(33, 219, 219, 0.911);
+    -webkit-text-stroke: 2px rgba(252, 214, 45, 0.507);
     font-weight: 900;
-    transform: rotate(-5deg);
-    font-size: 1.3rem;
+    /* transform: rotate(-10deg); */
+    font-size: 1.5rem;
     font-family: "Poppins", sans-serif;
     transition: 0.5s ease;
   }
-}
-.mobile-link:hover {
-  color: transparent;
-  -webkit-text-stroke: 2px rgb(84, 182, 247);
-  font-size: 1.3rem;
 }
 </style>

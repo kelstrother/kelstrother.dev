@@ -1,5 +1,4 @@
 <template>
-  <router-view />
   <MobileNav />
   <nav id="desktop-nav">
     <ul class="nav-ul">
@@ -23,6 +22,7 @@
       </li>
     </ul>
   </nav>
+  <router-view />
 </template>
 
 <script>
@@ -37,7 +37,7 @@ export default {
 #app {
   overflow: auto;
   background: rgb(53, 68, 82);
-  background: linear-gradient(rgb(18, 20, 22) 20%, rgb(2, 18, 37) 100%);
+  background-image: linear-gradient(rgb(18, 20, 22) 20%, rgb(2, 18, 37) 100%);
   font-family: "Poppins", sans-serif;
   text-align: center;
   height: 100vh;
@@ -52,8 +52,9 @@ nav {
 
 @media screen and (min-width: 700px) {
   nav {
+    z-index: 100;
     position: fixed;
-    height: 12vh;
+    height: 15vh;
     width: 100vw;
     top: 0;
     left: 0;
@@ -62,14 +63,14 @@ nav {
     align-items: center;
     margin: 0;
     padding: 0;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(2px);
   }
   ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
-    margin-top: 0.5rem;
+    margin-top: 0.8rem;
     padding: 0;
     width: 100vw;
   }
@@ -78,52 +79,67 @@ nav {
     font-family: "Poppins", Arial, sans-serif;
     position: relative;
     display: inline-block;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
-    font-size: 1.7rem;
-    font-weight: 600;
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 1.75px rgba(4, 182, 226, 1);
+    font-size: 3rem;
+    font-weight: 900;
     text-decoration: none;
     letter-spacing: 2px;
   }
   .router-link-exact-active {
+    z-index: 0;
     color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 2px rgba(33, 219, 219, 0.644);
+    -webkit-text-stroke: 2px rgba(253, 209, 11, 0.8);
     font-weight: 900;
   }
-  .link:before,
-  .link:after {
+  .router-link-exact-active::before {
+    z-index: 2;
+    color: rgba(4, 182, 226, .9);
+    filter: brightness(110%);
+    -webkit-text-stroke: 2.4px rgba(0, 0, 0, 1);
+    transform: translate(4px, -4px);
+  }
+  .router-link-exact-active::after {
+    transform: translate(2px, -2px);
+    z-index: 1;
+    /* filter: blur(.55px); */
+    -webkit-text-stroke: 2.5px rgba(253, 209, 11, 0.8);
+  }
+  .link::before,
+  .link::after {
     content: attr(data-text);
     position: absolute;
     bottom: 0;
     left: 0;
     transition: 0.2s;
   }
-  .link:hover:before {
+  .link:hover::before {
     z-index: 2;
-    -webkit-text-stroke: 2px rgba(33, 182, 219, 0.8);
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 2px rgba(33, 182, 219, 1);
     transform: translate(5px, -5px);
   }
-  .link:hover:after {
-    color: rgba(33, 219, 219, 0.8);
+  .link:hover::after {
     z-index: 1;
-    -webkit-text-stroke: 1px rgba(240, 205, 48, 1);
+    color: rgba(33, 219, 219, 0.8);
+    -webkit-text-stroke: 2px rgba(240, 205, 48, 1);
     transform: translate(2px, -2px);
   }
   .link:hover {
+    z-index: 0;
     color: rgba(0, 0, 0, 1);
     -webkit-text-stroke: 1px rgb(242, 242, 255);
     transition: 0.2s;
-    z-index: 0;
   }
   .mobile-nav {
     display: none;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .link {
     transform: rotate(15deg);
-    font-size: 2.5rem;
+    font-size: 2.9rem;
     font-weight: 900;
   }
 }

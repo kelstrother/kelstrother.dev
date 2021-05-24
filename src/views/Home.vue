@@ -40,7 +40,8 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  height: 100%;
+  color: rgba(0, 0, 128, 0.925);
   width: 100vw;
 }
 .name-container {
@@ -88,7 +89,8 @@ export default {
   z-index: 4;
 }
 .fname-4 {
-  -webkit-text-stroke: 1.5px rgba(228, 121, 34, 0.815);
+  /* -webkit-text-stroke: 1.5px rgba(228, 121, 34, 0.815); */
+  -webkit-text-stroke: 2px rgb(255, 133, 32);
   font-size: 4rem;
   letter-spacing: 3px;
   font-weight: 800;
@@ -111,7 +113,7 @@ export default {
   padding-top: 0.5em;
 }
 .lname-2 {
-  -webkit-text-stroke: 2px rgb(87, 153, 197);
+  -webkit-text-stroke: 2px rgb(87, 181, 197);
   font-size: 4rem;
   letter-spacing: 2px;
   font-weight: 700;
@@ -243,6 +245,9 @@ span.O {
   position: absolute;
   left: 120%;
   /* color: rgba(87, 153, 197, 0.664); */
+}
+.copyright {
+  color: rgba(101, 224, 255, 0.363);
 }
 @keyframes disappear {
   0% {
@@ -566,7 +571,7 @@ span.O {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   #name {
     font-size: 6rem;
   }

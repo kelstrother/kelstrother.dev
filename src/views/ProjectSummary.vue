@@ -1,27 +1,23 @@
 <template>
-<div class="wrapper">
-  <div class="error" v-if="error">{{ error }}</div>
-  <div class="project-name">
-    <h1>{{ project.name }}</h1>
-  </div>
-  <div v-if="project" class="project-details">
-    <div class="video-container">
-      <video autoplay loop>
-        <source class="video" :src="project.video" />
-      </video>
+  <div class="wrapper">
+    <div class="error" v-if="error">{{ error }}</div>
+    <div class="project-name">
+      <h1>{{ project.name }}</h1>
     </div>
-    <div class="project-info">
-      <p class="details">{{ project.details }}</p>
-      <div class="btn-container">
-        <a class="live-link" :href="project.live" target="_blank"
-          >The Project</a
-        >
-        <a class="git-link" :href="project.github" target="_blank"
-          >The Github</a
-        >
+    <div v-if="project" class="project-details">
+      <div class="video-container">
+        <video autoplay loop>
+          <source class="video" :src="project.video" />
+        </video>
+      </div>
+      <div class="project-info">
+        <p class="details">{{ project.details }}</p>
+        <div class="btn-container">
+          <a class="live-link" :href="project.live">The Project</a>
+          <a class="git-link" :href="project.github">The Github</a>
+        </div>
       </div>
     </div>
-  </div>
   </div>
 </template>
 

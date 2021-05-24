@@ -1,25 +1,29 @@
 <template>
-<div class="work-box">
-  <!-- <h1 class="title-work">my.work</h1> -->
-  <div class="my-work-container">
-    <div
-      v-for="project in projects"
-      :key="project.id"
-      class="project-container"
-    >
-      <router-link target="_blank" :to="{ name: 'ProjectSummary', params: { id: project.id } }">
-        <div class="single">
-          <h2 class="project-name">{{ project.name }}</h2>
-          <img class="project-img" :src="project.image" alt="" />
-          <p class="project-description">{{ project.description }}</p>
-        </div>
-      </router-link>
+  <div class="work-box">
+    <!-- <h1 class="title-work">my.work</h1> -->
+    <div class="my-work-container">
+      <div
+        v-for="project in projects"
+        :key="project.id"
+        class="project-container"
+      >
+        <router-link
+          target="_blank"
+          :to="{ name: 'ProjectSummary', params: { id: project.id } }"
+        >
+          <div class="single">
+            <h2 class="project-name">{{ project.name }}</h2>
+            <p class="project-description">{{ project.description }}</p>
+            <img class="project-img" :src="project.image" alt="" />
+          </div>
+        <router-view />
+        </router-link>
+      </div>
     </div>
-  </div>
     <div class="skills">
       <Skills />
     </div>
-</div>
+  </div>
 </template>
 
 <script>
@@ -28,9 +32,7 @@ export default {
   components: { Skills },
   props: ["projects"],
   data() {
-    return {
-   
-    };
+    return {};
   },
 };
 </script>
@@ -48,17 +50,18 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
 }
 .router-links {
   text-decoration: none;
   color: #378094;
 }
 .project-name {
-  margin-bottom: 0.5em;
+  /* padding-bottom: 0.5em; */
   text-decoration: none;
 }
 .project-img {
+  /* margin: .5em 0; */
   border-radius: 7px;
   height: 200px;
   width: 300px;
@@ -66,11 +69,16 @@ export default {
 .project-description {
   color: rgba(87, 153, 197, 1);
   font-weight: 400;
+  padding-bottom: 1em;
+}
+.single {
+  padding: 1.5em 0;
 }
 .skills {
   padding: 0;
   margin: 0;
-  display: inline-block;
+  /* display: inline-block; */
+  /* max-height: 20vh; */
 }
 a {
   text-decoration: none;
@@ -116,7 +124,7 @@ a:hover {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .project-img {
     width: 400px;
     height: 250px;

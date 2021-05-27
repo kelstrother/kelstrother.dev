@@ -1,6 +1,6 @@
 <template>
   <div class="work-box">
-    <!-- <h1 class="title-work">my.work</h1> -->
+    <h1 class="title-work">my.work</h1>
     <div class="my-work-container">
       <div
         v-for="project in projects"
@@ -16,8 +16,8 @@
             <p class="project-description">{{ project.description }}</p>
             <img class="project-img" :src="project.image" alt="" />
           </div>
-        <router-view />
         </router-link>
+        <router-view />
       </div>
     </div>
     <div class="skills">
@@ -38,11 +38,48 @@ export default {
 </script>
 
 <style>
+.work-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .title-work {
+  font-size: 4rem;
+  font-weight: 900;
+  position: relative;
+  padding: 1em 0 0.5em 0;
+  z-index: 0;
+  color: rgba(0, 0, 0, 1);
+  -webkit-text-stroke: 0.9px rgb(242, 242, 255);
+  letter-spacing: 0.4rem;
+}
+.title-work::before,
+.title-work::after {
   padding-top: 1em;
-  color: rgba(87, 153, 197, 1);
-  -webkit-text-stroke: 1px goldenrod;
-  font-size: 2.5rem;
+  content: "my.work";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.title-work::before {
+  z-index: 2;
+  -webkit-text-stroke: 1.5px rgba(4, 182, 226, 1);
+  transform: translate(4.5px, -4px);
+  transform: rotate(2.2deg);
+  letter-spacing: 0.41rem;
+}
+.title-work::after {
+  z-index: 1;
+  color: rgba(33, 219, 219, 0.8);
+  filter: blur(0.55px);
+  -webkit-text-stroke: 1.5px rgb(255, 208, 0);
+  transform: translate(2.9px, -2px);
+}
+.my-work-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .project-container {
   display: flex;
@@ -50,21 +87,26 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* margin-top: 5rem; */
 }
 .router-links {
   text-decoration: none;
   color: #378094;
 }
 .project-name {
-  /* padding-bottom: 0.5em; */
   text-decoration: none;
+  letter-spacing: 1.2px;
+  color: rgba(4, 182, 226, 1);
 }
 .project-img {
-  /* margin: .5em 0; */
   border-radius: 7px;
   height: 200px;
   width: 300px;
+  transform: scale(1);
+  transition: transform 0.3s ease;
+}
+.project-img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 .project-description {
   color: rgba(87, 153, 197, 1);
@@ -72,13 +114,18 @@ export default {
   padding-bottom: 1em;
 }
 .single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 1.5em 0;
+}
+.single:hover {
+  
 }
 .skills {
   padding: 0;
   margin: 0;
-  /* display: inline-block; */
-  /* max-height: 20vh; */
 }
 a {
   text-decoration: none;
@@ -88,9 +135,13 @@ a:hover {
   cursor: pointer;
   color: goldenrod;
   -webkit-text-stroke: 1.5px rgba(255, 227, 13, 0.322);
+  
 }
 
 @media screen and (min-width: 700px) {
+  .title-work {
+    display: none;
+  }
   .work-box {
     display: flex;
     flex-direction: column;

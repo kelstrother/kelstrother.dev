@@ -1,36 +1,36 @@
 <template>
-  <SideNav />
-  <MobileNav />
-  <nav id="desktop-nav">
-    <ul class="nav-ul">
-      <li>
-        <router-link to="/" data-text="home" class="link">home</router-link>
-      </li>
-      <li>
-        <router-link to="/mywork" data-text="my.work" class="link"
-          >my.work</router-link
-        >
-      </li>
-      <li>
-        <router-link to="/about" data-text="about.me" class="link"
-          >about.me</router-link
-        >
-      </li>
-      <li>
-        <router-link to="/contact" data-text="contact" class="link"
-          >contact</router-link
-        >
-      </li>
-    </ul>
-  </nav>
-  <router-view />
+  <div class="container">
+    <nav id="desktop-nav">
+      <ul class="nav-ul">
+        <li>
+          <router-link to="/" data-text="home" class="link">home</router-link>
+        </li>
+        <li>
+          <router-link to="/mywork" data-text="my.work" class="link"
+            >my.work</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/about" data-text="about.me" class="link"
+            >about.me</router-link
+          >
+        </li>
+        <li>
+          <router-link to="/contact" data-text="contact" class="link"
+            >contact</router-link
+          >
+        </li>
+      </ul>
+    </nav>
+    <SideNav />
+    <router-view />
+  </div>
 </template>
 
 <script>
-import MobileNav from "./components/MobileNav";
 import SideNav from "./components/SideNav";
 export default {
-  components: { MobileNav, SideNav },
+  components: { SideNav },
 };
 </script>
 
@@ -38,15 +38,13 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
 #app {
   overflow: auto;
-  background: rgb(53, 68, 82);
-  background-image: linear-gradient(rgb(18, 20, 22) 20%, rgb(2, 18, 37) 100%);
+  background: rgb(0, 0, 0);
+  /* background-image: linear-gradient(rgb(18, 20, 22) 20%, rgb(2, 18, 37) 100%); */
+  background-image: linear-gradient(rgb(0, 0, 0) 20%, rgb(10, 22, 37) 100%);
   font-family: "Poppins", sans-serif;
-  text-align: center;
+  /* text-align: center; */
   height: 100vh;
   width: 100vw;
-}
-a {
-  text-decoration: none;
 }
 nav {
   display: none;
@@ -57,55 +55,34 @@ nav {
     z-index: 100;
     position: fixed;
     height: 15vh;
-    width: 100vw;
+    width: 100%;
     top: 0;
-    left: 0;
+    /* left: 0; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(2px);
   }
-  ul {
+  .nav-ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
-    margin-top: 0.8rem;
-    padding: 0;
-    width: 100vw;
+    align-items: center;
   }
   .link {
     transform: rotate(12deg);
     font-family: "Poppins", Arial, sans-serif;
-    position: relative;
     display: inline-block;
-    color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1.75px rgba(4, 182, 226, 1);
-    font-size: 3rem;
+    position: relative;
+    color: rgba(0, 0, 0, 0.377);
+    -webkit-text-stroke: 1.55px rgba(4, 182, 226, 0.904);
+    font-size: 2.8rem;
     font-weight: 900;
     text-decoration: none;
-    letter-spacing: 2px;
-  }
-  .router-link-exact-active {
-    z-index: 0;
-    color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 2px rgba(253, 209, 11, 0.8);
-    font-weight: 900;
-  }
-  .router-link-exact-active::before {
-    z-index: 2;
-    color: rgba(4, 182, 226, 0.9);
-    filter: brightness(110%);
-    -webkit-text-stroke: 2.4px rgba(0, 0, 0, 1);
-    transform: translate(4px, -4px);
-  }
-  .router-link-exact-active::after {
-    transform: translate(2px, -2px);
-    z-index: 1;
-    -webkit-text-stroke: 1px rgba(255, 189, 6, 0.9);
-    filter: blur(0.8px);
+    letter-spacing: 3px;
+    justify-content: space-between;
+    margin: 0 1rem;
   }
   .link::before,
   .link::after {
@@ -115,34 +92,65 @@ nav {
     left: 0;
     transition: 0.2s;
   }
-  .link:hover::before {
-    z-index: 2;
-    color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 2px rgba(33, 182, 219, 1);
-    transform: translate(5px, -5px);
-  }
-  .link:hover::after {
-    z-index: 1;
-    color: rgba(33, 219, 219, 0.8);
-    -webkit-text-stroke: 2px rgba(240, 205, 48, 1);
-    transform: translate(2px, -2px);
+  .link::before {
+    -webkit-text-stroke: 0.75px rgb(250, 195, 15);
+    transform: translate(0.75px, -1.4px);
+    letter-spacing: 2.8px;
+    z-index: -1;
   }
   .link:hover {
     z-index: 0;
     color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1px rgb(242, 242, 255);
+    -webkit-text-stroke: 1.25px rgb(242, 242, 255);
     transition: 0.2s;
   }
-  .mobile-nav {
-    display: none;
+  .link:hover::before {
+    z-index: 2;
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 1.5px rgba(4, 182, 226, 0.9);
+    transform: translate(7px, -5px);
+    filter: brightness(120%);
+  }
+  .link:hover::after {
+    z-index: 1;
+    color: rgba(33, 219, 219, 0.445);
+    -webkit-text-stroke: 2px rgba(240, 205, 48, 1);
+    transform: translate(4px, -3px);
+  }
+  .router-link-exact-active {
+    z-index: 0;
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 1.25px rgb(242, 242, 255);
+    /* text-shadow: 0 0 10px rgba(33, 219, 219, 0.3); */
+    /* text-shadow: 3px 0 8px rgba(255, 217, 0, 0.3); */
+  }
+  .router-link-exact-active::before {
+    z-index: 2;
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 1.5px rgba(4, 182, 226, 0.9);
+    transform: translate(7px, -4.5px);
+    filter: brightness(120%);
+  }
+  .router-link-exact-active::after {
+    -webkit-text-stroke: 2px rgba(255, 189, 6, 0.9);
+    filter: blur(0.75px) brightness(120%);
+    color: rgba(33, 219, 219, 0.445);
+    transform: translate(4px, -2.5px);
+    z-index: 1;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .link {
     transform: rotate(15deg);
-    font-size: 2.9rem;
     font-weight: 900;
+  }
+}
+
+@media screen and (min-width: 1224px) {
+  .link {
+    font-size: 2.9rem;
+    margin: 0 2.2rem;
   }
 }
 </style>

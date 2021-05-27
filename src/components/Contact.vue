@@ -35,22 +35,31 @@ export default {};
   align-items: center;
 }
 .grabber {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
   margin-top: 4em;
   padding: 0;
   color: #fff;
 }
 .guitars {
-  width: 80vw;
-  height: 100%;
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
 }
 #contactme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100vw;
 }
 form {
   display: flex;
   flex-direction: column;
-  max-width: 40em;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
   text-align: left;
   padding: 1em;
@@ -69,8 +78,7 @@ input {
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 7px;
   display: block;
-  padding: 10px 6px;
-  width: 100%;
+  padding: 0.8rem 0.5rem;
   box-sizing: border-box;
   border: none;
 }
@@ -104,6 +112,9 @@ button:hover {
 @media screen and (min-width: 700px) {
   .contact-container {
     margin-top: 5rem;
+  }
+  .grabber {
+    padding-top: 10em;
   }
   .guitars {
     width: 50vw;

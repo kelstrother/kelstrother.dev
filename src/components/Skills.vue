@@ -116,13 +116,15 @@ export default {};
 
 <style scoped>
 .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 100%;
 }
 .title-skills {
   font-size: 4rem;
   font-weight: 900;
   position: relative;
-  display: inline-block;
   padding: 1em 0 0.5em 0;
   z-index: 0;
   color: rgba(0, 0, 0, 1);
@@ -154,10 +156,10 @@ export default {};
 .skills-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
+  max-width: 800px;
   margin: 0 auto 5em auto;
-  max-width: 60vw;
 }
 .skill-icon {
   display: flex;
@@ -173,8 +175,8 @@ export default {};
 .icon {
   border-radius: 7px;
   margin: 0.5em;
-  height: 2.2em;
-  width: 2.2em;
+  height: 2.5em;
+  width: 2.5em;
 }
 .skill {
   color: rgba(87, 153, 197, 1);

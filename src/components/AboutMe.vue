@@ -4,9 +4,10 @@
     <section class="myself">
       <p class="biography">
         I live in Colorado. When I'm not creating things with code, I'm probably
-        doing something music related. <br /><br />I am a software engineer with
-        a focus on frontend development. A need for creative expression drives
-        my ambition to build things that can make a difference.<br />
+        doing something music related. <br />
+        I am a software engineer with a focus on frontend development. A need
+        for creative expression drives my ambition to build things that can make
+        a difference.<br />
       </p>
     </section>
   </div>
@@ -91,7 +92,8 @@ export default {};
     font-size: 4rem;
   }
   .biography {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    width: 700px;
   }
 }
 </style>

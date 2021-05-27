@@ -2,14 +2,6 @@
   <div class="home">
     <header class="name-container">
       <Name />
-      <!-- <p id="name" class="f-name">Kel</p>
-      <p id="name" class="fname-2">Kel</p>
-      <p id="name" class="fname-3">Kel</p>
-      <p id="name" class="fname-4">Kel</p>
-      <p id="name" class="l-name">Strother</p>
-      <p id="name" class="lname-2">Strother</p>
-      <p id="name" class="lname-3">Strother</p>
-      <p id="name" class="lname-4">Strother</p> -->
     </header>
     <div class="job-title">
       <p class="webdev" data-text="Web">
@@ -52,104 +44,9 @@ export default {
   top: 5%;
   left: 10%;
   transform: rotate(-5deg);
-  /* height: 20vh;
-  width: 80vw; */
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-.f-name {
-  -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
-  position: absolute;
-  top: 41px;
-  left: 4px;
-  z-index: 3;
-  font-size: 4rem;
-  letter-spacing: 1px;
-  font-weight: 900;
-  color: transparent;
-}
-.fname-2 {
-  -webkit-text-stroke: 2px rgb(87, 153, 197);
-  font-size: 4rem;
-  letter-spacing: 2px;
-  font-weight: 700;
-  position: absolute;
-  top: 38px;
-  left: 6px;
-  color: rgba(0, 0, 0, 0.747);
-  z-index: 5;
-}
-.fname-3 {
-  -webkit-text-stroke: 3px rgba(66, 219, 219, 0.671);
-  font-size: 4rem;
-  letter-spacing: 2px;
-  font-weight: 800;
-  position: absolute;
-  top: 37px;
-  left: 5px;
-  color: transparent;
-  z-index: 4;
-}
-.fname-4 {
-  /* -webkit-text-stroke: 1.5px rgba(228, 121, 34, 0.815); */
-  -webkit-text-stroke: 2px rgb(255, 133, 32);
-  font-size: 4rem;
-  letter-spacing: 3px;
-  font-weight: 800;
-  position: absolute;
-  top: 42px;
-  left: 3px;
-  color: transparent;
-  z-index: 2;
-}
-.l-name {
-  -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
-  position: absolute;
-  top: 80px;
-  left: 21px;
-  z-index: 3;
-  letter-spacing: 1px;
-  font-weight: 900;
-  font-size: 4rem;
-  color: transparent;
-  padding-top: 0.5em;
-}
-.lname-2 {
-  -webkit-text-stroke: 2px rgb(87, 181, 197);
-  font-size: 4rem;
-  letter-spacing: 2px;
-  font-weight: 700;
-  position: absolute;
-  top: 78px;
-  left: 22px;
-  color: rgba(0, 0, 0, 0.719);
-  z-index: 5;
-  padding-top: 0.5em;
-}
-.lname-3 {
-  -webkit-text-stroke: 3px rgba(66, 219, 219, 0.671);
-  font-size: 4rem;
-  letter-spacing: 1px;
-  font-weight: 800;
-  position: absolute;
-  top: 79px;
-  left: 18px;
-  color: transparent;
-  z-index: 4;
-  padding-top: 0.5em;
-}
-.lname-4 {
-  -webkit-text-stroke: 1.5px rgba(228, 121, 34, 0.815);
-  font-size: 4rem;
-  letter-spacing: 1.2px;
-  font-weight: 800;
-  position: absolute;
-  top: 82px;
-  left: 19px;
-  color: transparent;
-  z-index: 2;
-  padding-top: 0.5em;
 }
 .job-title {
   position: absolute;
@@ -194,18 +91,18 @@ span.dev::before {
 }
 span.eloper {
   letter-spacing: 2.2px;
-  animation: flicker-in-1 4s;
-  animation-delay: 0.3s;
 }
 span.eloper::before {
   content: attr(data-text);
   position: absolute;
-  top: 0;
-  left: 38.5%;
+  top: -3px;
+  left: 37.5%;
   -webkit-text-stroke: 1px rgba(169, 177, 56, 0.938);
   font-weight: 700;
   z-index: 0;
   color: transparent;
+  animation: electrify 4s;
+  animation-delay: 0.3s;
 }
 .outof {
   position: absolute;
@@ -239,15 +136,41 @@ span.eloper::before {
   font-weight: 900;
   letter-spacing: 1.4px;
 }
+.denver::before {
+  content: "Denver";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: 1px rgb(0, 204, 255);
+  transform: translate(-1.5px, -1.5px);
+}
 span.C {
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   left: 100%;
-  /* color: rgba(87, 153, 197, 0.644); */
+}
+span.C::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "C";
+  text-shadow: 0 0 15px rgba(231, 36, 10, 0.24);
+  z-index: 0;
+  animation: soft-blink infinite 5s;
 }
 span.O {
+  color: rgba(0, 0, 0, 1);
   position: absolute;
   left: 120%;
-  /* color: rgba(87, 153, 197, 0.664); */
+}
+span.O::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "O";
+  text-shadow: 0 0 15px rgba(253, 228, 4, 0.26);
+  z-index: 0;
+  animation: soft-blink infinite 5s;
 }
 .copyright {
   color: rgba(101, 224, 255, 0.363);
@@ -285,11 +208,7 @@ span.O {
     opacity: 0;
   }
 }
-.flicker-in-1 {
-  -webkit-animation: flicker-in-1 2s linear 2s forwards;
-  animation: flicker-in-1 2s linear 2s forwards;
-}
-@-webkit-keyframes flicker-in-1 {
+/* @-webkit-keyframes flicker-in-1 {
   0% {
     opacity: 0;
   }
@@ -398,7 +317,7 @@ span.O {
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
     opacity: 1;
   }
-}
+} */
 @keyframes flicker-in-1 {
   0% {
     opacity: 0;
@@ -408,7 +327,7 @@ span.O {
   }
   10.1% {
     -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.842);
-    opacity: 1;
+    opacity: 0.2;
   }
   10.2% {
     opacity: 0;
@@ -418,7 +337,7 @@ span.O {
   }
   20.1% {
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
-    opacity: 1;
+    opacity: 0.2;
   }
   20.6% {
     opacity: 0;
@@ -428,11 +347,11 @@ span.O {
   }
   30.1% {
     -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.842);
-    opacity: 1;
+    opacity: 0.2;
   }
   30.5% {
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
-    opacity: 1;
+    opacity: 0.2;
   }
   30.6% {
     opacity: 0;
@@ -442,15 +361,15 @@ span.O {
   }
   45.1% {
     -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
-    opacity: 1;
+    opacity: 0.2;
   }
   50% {
     -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.842);
-    opacity: 1;
+    opacity: 0.2;
   }
   55% {
     -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
-    opacity: 1;
+    opacity: 0.2;
   }
   55.1% {
     opacity: 0;
@@ -460,11 +379,11 @@ span.O {
   }
   57.1% {
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
-    opacity: 1;
+    opacity: 0.2;
   }
   60% {
     -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
-    opacity: 1;
+    opacity: 0.2;
   }
   60.1% {
     opacity: 0;
@@ -474,11 +393,11 @@ span.O {
   }
   65.1% {
     -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.842);
-    opacity: 1;
+    opacity: 0.2;
   }
   75% {
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
-    opacity: 1;
+    opacity: 0.2;
   }
   75.1% {
     opacity: 0;
@@ -488,11 +407,11 @@ span.O {
   }
   77.1% {
     -webkit-text-stroke: 2px rgba(228, 121, 34, 0.815);
-    opacity: 1;
+    opacity: 0.2;
   }
   85% {
     -webkit-text-stroke: 1.5px rgba(255, 217, 0, 0.842);
-    opacity: 1;
+    opacity: 0.2;
   }
   85.1% {
     opacity: 0;
@@ -502,10 +421,120 @@ span.O {
   }
   86.1% {
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
-    opacity: 1;
+    opacity: 0.2;
   }
   100% {
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
+    opacity: 1;
+  }
+}
+@keyframes electrify {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
+    opacity: 1;
+  }
+  30.5% {
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    -webkit-text-stroke: 1px rgba(228, 121, 34, 0.815);
+    opacity: 1;
+  }
+  50% {
+    -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
+    opacity: 1;
+  }
+  55% {
+    -webkit-text-stroke: 1px rgba(228, 121, 34, 0.815);
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+    opacity: 1;
+  }
+  60% {
+    -webkit-text-stroke: 1px rgba(228, 121, 34, 0.815);
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
+    opacity: 1;
+  }
+  75% {
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    -webkit-text-stroke: 1px rgba(228, 121, 34, 0.815);
+    opacity: 1;
+  }
+  85% {
+    -webkit-text-stroke: 1px rgba(255, 217, 0, 0.842);
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-text-stroke: 1px rgba(87, 153, 197, 1);
     opacity: 1;
   }
 }
@@ -521,15 +550,7 @@ span.O {
     justify-content: space-between;
     align-items: center;
   }
-  #name {
-    font-size: 4rem;
-  }
-  .fname-2 {
-    color: rgba(0, 0, 0, 0.5);
-  }
-  .lname-2 {
-    color: rgba(0, 0, 0, 0.5);
-  }
+
   .job-title {
     position: absolute;
     top: 50%;
@@ -551,10 +572,8 @@ span.O {
     left: 10%;
     font-size: 2rem;
     font-weight: 800;
-    /* color: rgba(127, 255, 212, 0.685); */
-    /* color: transparent; */
     color: rgba(0, 0, 0, 0.5);
-    -webkit-text-stroke: 0.5px rgba(127, 255, 212, 0.795);
+    -webkit-text-stroke: 0.5px rgba(127, 255, 212, 0.897);
   }
   .city-container {
     position: absolute;
@@ -566,6 +585,7 @@ span.O {
     /* color: transparent; */
     -webkit-text-stroke: 2px rgba(87, 153, 197, 1);
   }
+
   span.C {
     left: 100%;
   }
@@ -575,31 +595,82 @@ span.O {
 }
 
 @media screen and (min-width: 1024px) {
-  #name {
-    font-size: 6rem;
-  }
-  .l-name {
-    top: -5px;
-    left: 180px;
-  }
-  .lname-2 {
-    top: -5px;
-    left: 185px;
-  }
-  .lname-3 {
-    top: -5px;
-    left: 185px;
-  }
-  .lname-4 {
-    top: -5px;
-    left: 185px;
-  }
   .job-title {
-    top: 35%;
+    top: 43%;
     left: 6%;
   }
   .webdev {
-    font-size: 5.5rem;
+    z-index: 0;
+    font-size: 5rem;
+    color: rgba(33, 219, 219, 0.5);
+    -webkit-text-stroke: 2px rgba(207, 153, 3, 1);
+    filter: blur(1px);
+    text-shadow: 0 0 15px rgba(255, 217, 0, 0.185);
+  }
+  .webdev::before {
+    top: 0;
+    left: 1.5px;
+    z-index: 1;
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 1.5px rgb(0, 204, 255);
+  }
+  span.dev {
+    top: 70%;
+    left: 73%;
+    color: rgba(0, 0, 0, 0.952);
+    z-index: 15;
+    -webkit-text-stroke: 1px rgb(255, 192, 17);
+    transform: translate(-1.5px, -1.5px);
+    position: absolute;
+    text-shadow: 3px 0 10px rgba(0, 247, 255, 0.123);
+  }
+  span.dev::before,
+  span.dev::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  span.dev::before {
+    z-index: 0;
+    color: rgba(255, 187, 0, 0.699);
+    -webkit-text-stroke: 3px rgb(0, 204, 255);
+    transform: translate(0.5px, -2.66px);
+    filter: blur(1px);
+    letter-spacing: 3px;
+  }
+  span.dev::after {
+    z-index: 0;
+    content: attr(data-text);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.671);
+    transform: translate(1.5px, 1.5px);
+  }
+  span.eloper {
+    color: rgba(0, 0, 0, 0.952);
+    z-index: 15;
+    -webkit-text-stroke: 1px rgb(255, 112, 17);
+    transform: translate(-1.5px, -1.5px);
+    position: absolute;
+    text-shadow: 0 0 10px rgba(255, 251, 0, 0.123);
+    /* text-shadow: 0 0 15px rgba(0, 247, 255, 0); */
+  }
+  span.eloper::before,
+  span.eloper::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  span.eloper::before {
+    z-index: 0;
+    color: rgba(255, 192, 17, 0.473);
+    -webkit-text-stroke: 3px rgb(0, 204, 255);
+    transform: translate(3px, -2.5px);
+    letter-spacing: 2.2px;
+  }
+  span.eloper::after {
+    z-index: 0;
+    content: attr(data-text);
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    transform: translate(1.5px, 1.5px);
   }
   .city-container {
     bottom: 10%;
@@ -608,14 +679,52 @@ span.O {
   .location {
     font-size: 5rem;
   }
+  .denver::before,
+  .denver::after {
+    content: "Denver";
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .denver::before {
+    -webkit-text-stroke: 1.5px rgb(0, 204, 255);
+    transform: translate(-1.5px, -1.5px);
+  }
   .outof {
     display: flex;
-    top: 57%;
-    left: 30%;
+    top: 65%;
+    left: 25%;
     font-size: 3.5rem;
   }
+  span.C {
+    color: rgb(0, 0, 0);
+    top: 55%;
+    left: 78%;
+  }
+  span.C::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "C";
+    text-shadow: 0 0 10px rgba(231, 36, 10, 0.404);
+    /* -webkit-text-stroke: 1px rgba(199, 35, 13, 0.5);
+    transform: translate(-1.5px, -1.5px); */
+    z-index: 0;
+  }
   span.O {
-    left: 120%;
+    color: rgba(0, 0, 0, 1);
+    top: 55%;
+    left: 98%;
+  }
+  span.O::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "O";
+    text-shadow: 0 0 10px rgba(253, 228, 4, 0.404);
+    /* -webkit-text-stroke: 1px rgba(199, 35, 13, 0.5);
+    transform: translate(-1.5px, -1.5px); */
+    z-index: 0;
   }
 }
 </style>

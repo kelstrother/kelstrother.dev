@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import MyWork from "../components/MyWork"
-import getProjects from "../helpers/getProjects"
+import MyWork from "../components/MyWork";
+import getProjects from "../helpers/getProjects";
 export default {
-   components:  { MyWork },
+  components: { MyWork },
   setup() {
     const { projects, error, load } = getProjects();
 
@@ -14,8 +14,7 @@ export default {
 
     return { projects, error };
   },
-}
+};
 </script>
 
-<style scoped> 
-</style>
+<style scoped></style>

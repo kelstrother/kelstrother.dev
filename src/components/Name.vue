@@ -1,11 +1,11 @@
 <template>
   <div class="container">
+    <div class="myname-container">
+      <h1 id="fullname">Kel Strother</h1>
+    </div>
     <div class="mobile-name-container">
       <p class="kel">Kel</p>
       <p class="strother">Strother</p>
-    </div>
-    <div class="myname-container">
-      <h1 id="fullname">Kel Strother</h1>
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {};
   display: none;
 }
 .kel {
-   margin: 1rem 0 0 0;
+  margin: 1rem 0 0 0;
   font-size: 3.4rem;
   font-weight: 900;
   position: relative;
@@ -39,8 +39,7 @@ export default {};
 .kel::before {
   z-index: 2;
   -webkit-text-stroke: 1.5px rgb(33, 193, 233);
-  transform: translate(4.5px, -4px);
-  transform: rotate(2.5deg);
+  transform: translate(4.5px, -4px) rotate(0deg);
 }
 .kel::after {
   z-index: 1;
@@ -50,8 +49,8 @@ export default {};
   transform: translate(2.9px, -2px);
 }
 .strother {
-   margin: 1rem 0 0 0;
-   font-size: 3.4rem;
+  margin: 1rem 0 0 0;
+  font-size: 3.4rem;
   font-weight: 900;
   position: absolute;
   top: 3.5rem;
@@ -72,7 +71,6 @@ export default {};
 .strother::before {
   z-index: 2;
   transform: translate(5px, -4px);
-  transform: rotate(1.5deg);
   -webkit-text-stroke: 1.5px rgb(33, 193, 233);
   /* -webkit-text-stroke: 2px rgb(61, 168, 255); */
   /* letter-spacing: 0.22rem; */
@@ -92,18 +90,20 @@ export default {};
   .myname-container {
     display: flex;
     flex-direction: row;
-    padding: 4rem 0 0 0;
+    justify-content: space-between;
+    height: 35vh;
+    width: 100vw;
     align-items: center;
+    transform: translate(-15%, 0%);
   }
   #fullname {
-    margin-top: 3rem;
-    font-size: 6rem;
+    /* margin: 3rem 3rem 0 0; */
+    font-size: 5.5rem;
     position: relative;
     font-weight: 900;
-    position: relative;
     z-index: 0;
     color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1px rgb(242, 242, 255);
+    -webkit-text-stroke: 1px rgba(242, 242, 255, 0.719);
     letter-spacing: 0.225rem;
   }
   #fullname::before,
@@ -115,93 +115,55 @@ export default {};
   }
   #fullname::before {
     z-index: 2;
-    /* color: rgba(0, 0, 0, 1); */
-    /* -webkit-text-stroke: 1.5px rgba(4, 182, 226, 1); */
-    -webkit-text-stroke: 1.5px rgb(33, 193, 233);
-    transform: translate(6px, -2px) rotate(1.2deg);
+    -webkit-text-stroke: 1.5px rgb(0, 204, 255);
+    color: black;
+    transform: translate(4.5px, -4px);
   }
   #fullname::after {
+    /* transform: translate(3.7px, -2px); */
     z-index: 1;
-    color: rgba(33, 219, 219, 0.5);
-    /* -webkit-text-stroke: 2.4px rgba(255, 189, 6, 0.9); */
-    -webkit-text-stroke: 3px rgba(207, 153, 3, 1);
-    filter: blur(0.5px);
-    transform: translate(3.7px, -2px);
+    /* color: rgba(255, 255, 255, 0.637); */
+    color: rgba(33, 219, 219, 0.8);
+    -webkit-text-stroke: 2.6px rgba(207, 153, 3, 0.9);
+    transform: translate(2px, -2px);
+    filter: blur(0.8px);
+    text-shadow: 0 0 10px rgba(0, 204, 255, 0.281);
   }
 }
 
 @media screen and (min-width: 1024px) {
   #fullname {
     margin-top: 3rem;
-    font-size: 6rem;
-    position: relative;
+    font-size: 7rem;
+    /* position: relative;
     font-weight: 900;
     position: relative;
     z-index: 1;
-    /* color: rgba(33, 219, 219, 0.5); */
-    /* color: rgba(0, 0, 0, 1); */
     -webkit-text-stroke: 1.2px rgb(0, 204, 255);
-    /*  */
-    letter-spacing: 0.225rem;
+    letter-spacing: 0.225rem; */
   }
   #fullname::before {
-    content: "";
-    -webkit-text-stroke: 1px rgb(242, 242, 255);
-    color: wheat;
+    /* -webkit-text-stroke: 1.2px rgb(0, 204, 255);
+    color: black;
     top: 0;
     left: 0;
-    position: absolute;
-    transform: translate(1.5px, -3.5px);
+    position: absolute; */
+    /* transform: translate(0px, 3px); */
   }
   #fullname::after {
-    content: "Kel Strother";
+    /* color: rgba(33, 219, 219, 0.5); */
+    /* -webkit-text-stroke: 3px rgba(33, 219, 219, 0.5); */
+    /* -webkit-text-stroke: 3px rgb(2, 181, 212); */
+    /* content: "Kel Strother";
     position: absolute;
-    z-index: -1;
-    color: rgba(33, 219, 219, 0.5);
-    -webkit-text-stroke: 3px rgba(207, 153, 3, 1);
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.637);
+    -webkit-text-stroke: 2px rgba(194, 145, 12, 0.808);
     top: 0;
     left: 0;
-    /* filter: blur(2px); */
-    transform: translate(1.5px, -1.5px);
-    text-shadow: 0 0 10px rgba(255, 217, 0, 0.493);
+    transform: translate(1.5px, -1.5px); */
+    text-shadow: 0 0 10px rgba(0, 204, 255, 0.281);
+    /* text-shadow: 0 0 10px rgba(255, 217, 0, 0.582); */
   }
 }
 </style>
-span.dev {
-    text-shadow: 0 0 30px rgba(0, 204, 255, 0.24);
-    color: rgba(0, 0, 0, 0.37);
-    -webkit-text-stroke: 1px rgb(252, 252, 252);
-    /* color: rgba(33, 219, 219, 0.5); */
-    /* -webkit-text-stroke: 2px rgba(207, 153, 3, 1); */
-    position: absolute;
-    top: 65%;
-    left: 71%;
-    z-index: 15;
-    font-weight: 900;
-  }
-  span.dev::before,
-  span.dev::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  span.dev::before {
-    color: rgba(0, 0, 0, 0.952);
-    z-index: 15;
-    -webkit-text-stroke: 1px rgb(255, 192, 17);
-    /* -webkit-text-stroke: 3px rgb(0, 204, 255); */
-    /* transform: translate(3px, -2.5px); */
-    /* letter-spacing: 2.2px; */
-  }
-  span.dev::after {
-    /* color: rgba(0, 0, 0, 0); */
-    /* z-index: 1; */
-    content: attr(data-text);
-    /* -webkit-text-stroke: 0.5px rgba(207, 153, 3, 1); */
-    /* transform: translate(-5px, 0); */
-    color: rgb(255, 192, 17);
-    /* color: rgba(255, 255, 255, 0.5); */
-    -webkit-text-stroke: 3px rgb(0, 204, 255);
-    transform: translate(3px, -2.5px);
-    /* letter-spacing: 2.2px; */
-  }

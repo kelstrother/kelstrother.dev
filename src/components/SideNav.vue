@@ -3,39 +3,23 @@
     <transition name="slide">
       <div v-if="showNav" class="sidenav-container">
         <ul class="sn-ul">
-          <li class="sn-link">
-            <router-link
-              @click="showNav = !showNav"
-              data-text="home"
-              class="sidenav-link"
-              to="/"
+          <li @click="showNav = !showNav" class="sn-link">
+            <router-link data-text="home" class="sidenav-link" to="/"
               >home
             </router-link>
           </li>
-          <li class="sn-link">
-            <router-link
-              @click="showNav = !showNav"
-              data-text="my.work"
-              class="sidenav-link"
-              to="/mywork"
+          <li @click="showNav = !showNav" class="sn-link">
+            <router-link data-text="my.work" class="sidenav-link" to="/mywork"
               >my.work
             </router-link>
           </li>
-          <li class="sn-link">
-            <router-link
-              @click="showNav = !showNav"
-              data-text="about"
-              class="sidenav-link"
-              to="/about"
+          <li @click="showNav = !showNav" class="sn-link">
+            <router-link data-text="about" class="sidenav-link" to="/about"
               >about
             </router-link>
           </li>
-          <li class="sn-link">
-            <router-link
-              @click="showNav = !showNav"
-              data-text="contact"
-              class="sidenav-link"
-              to="/contact"
+          <li @click="showNav = !showNav" class="sn-link">
+            <router-link data-text="contact" class="sidenav-link" to="/contact"
               >contact</router-link
             >
           </li>
@@ -54,14 +38,14 @@
 export default {
   data() {
     return {
-      showNav: true,
+      showNav: false,
     };
   },
-  watch: {
-    $route() {
-      this.showNav = false;
-    },
-  },
+  // watch: {
+  //   $route() {
+  //     this.showNav = false;
+  //   },
+  // },
 };
 // import { ref } from "vue";
 // export default {

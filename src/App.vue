@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <SideNav />
     <nav id="desktop-nav">
       <ul class="nav-ul">
         <li>
@@ -22,7 +23,6 @@
         </li>
       </ul>
     </nav>
-    <SideNav />
     <router-view />
   </div>
 </template>
@@ -42,7 +42,6 @@ export default {
   /* background-image: linear-gradient(rgb(18, 20, 22) 20%, rgb(2, 18, 37) 100%); */
   background-image: linear-gradient(rgb(0, 0, 0) 20%, rgb(10, 22, 37) 100%);
   font-family: "Poppins", sans-serif;
-  /* text-align: center; */
   height: 100vh;
   width: 100vw;
 }
@@ -57,7 +56,6 @@ nav {
     height: 15vh;
     width: 100%;
     top: 0;
-    /* left: 0; */
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -65,24 +63,25 @@ nav {
     backdrop-filter: blur(2px);
   }
   .nav-ul {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style: none;
     align-items: center;
   }
   .link {
-    transform: rotate(12deg);
+    transform: rotate(15deg);
     font-family: "Poppins", Arial, sans-serif;
     display: inline-block;
     position: relative;
     color: rgba(0, 0, 0, 0.377);
     -webkit-text-stroke: 1.55px rgba(4, 182, 226, 0.904);
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     font-weight: 900;
     text-decoration: none;
     letter-spacing: 3px;
-    justify-content: space-between;
-    margin: 0 1rem;
+    /* justify-content: space-around; */
+    /* margin: 0 1rem; */
   }
   .link::before,
   .link::after {
@@ -121,8 +120,6 @@ nav {
     z-index: 0;
     color: rgba(0, 0, 0, 1);
     -webkit-text-stroke: 1.25px rgb(242, 242, 255);
-    /* text-shadow: 0 0 10px rgba(33, 219, 219, 0.3); */
-    /* text-shadow: 3px 0 8px rgba(255, 217, 0, 0.3); */
   }
   .router-link-exact-active::before {
     z-index: 2;
@@ -142,7 +139,8 @@ nav {
 
 @media screen and (min-width: 1024px) {
   .link {
-    transform: rotate(15deg);
+    font-size: 2.8rem;
+    /* transform: rotate(15deg); */
     font-weight: 900;
   }
 }
@@ -150,7 +148,7 @@ nav {
 @media screen and (min-width: 1224px) {
   .link {
     font-size: 2.9rem;
-    margin: 0 2.2rem;
+    /* margin: 0 2.2rem; */
   }
 }
 </style>

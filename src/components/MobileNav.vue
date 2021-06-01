@@ -11,7 +11,7 @@
 export default {};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .mobile-nav {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.7);

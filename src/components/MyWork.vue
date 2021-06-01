@@ -8,8 +8,8 @@
         class="project-container"
       >
         <router-link
-          target="_blank"
           :to="{ name: 'ProjectSummary', params: { id: project.id } }"
+          target="_blank"
         >
           <div class="single">
             <h2 class="project-name">{{ project.name }}</h2>
@@ -17,7 +17,6 @@
             <img class="project-img" :src="project.image" alt="" />
           </div>
         </router-link>
-        <router-view />
       </div>
     </div>
     <div class="skills">
@@ -44,7 +43,7 @@ export default {
   align-items: center;
 }
 .title-work {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   position: relative;
   padding: 1em 0 0.5em 0;
@@ -96,6 +95,7 @@ export default {
   text-decoration: none;
   letter-spacing: 1.2px;
   color: rgba(4, 182, 226, 1);
+  font-size: 1.4rem;
 }
 .project-img {
   border-radius: 7px;
@@ -112,6 +112,7 @@ export default {
   color: rgba(87, 153, 197, 1);
   font-weight: 400;
   padding-bottom: 1em;
+  font-size: 0.9rem;
 }
 .single {
   display: flex;
@@ -119,9 +120,6 @@ export default {
   justify-content: center;
   align-items: center;
   padding: 1.5em 0;
-}
-.single:hover {
-  
 }
 .skills {
   padding: 0;
@@ -135,7 +133,6 @@ a:hover {
   cursor: pointer;
   color: goldenrod;
   -webkit-text-stroke: 1.5px rgba(255, 227, 13, 0.322);
-  
 }
 
 @media screen and (min-width: 700px) {
@@ -145,20 +142,25 @@ a:hover {
   .work-box {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    /* height: 100vh; */
   }
   .single {
-    margin: 6rem 1rem 0 0;
+    margin: 0 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
   }
+  .project-name {
+    font-size: 1.7rem;
+  }
+  .project-description {
+    font-size: 1rem;
+  }
   .project-img {
-    width: 250px;
-    height: 150px;
+    width: 18em;
+    height: 12em;
   }
   .title-work {
     display: none;
@@ -172,17 +174,17 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    padding-top: 9em;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .project-img {
-    width: 400px;
-    height: 250px;
+    width: 25em;
+    height: 15em;
   }
-  .single {
-    margin-top: 7rem;
-    padding: 1.5rem;
+  .my-work-container {
+    padding-top: 11em;
   }
 }
 </style>

@@ -33,63 +33,85 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  height: 100vh;
+.wrapper {
+  /* height: 100vh; */
+  padding-top: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .project-name {
   display: flex;
-  flex-direction: column;
   color: #c9cdd1;
-  margin-top: 8em;
 }
 .project-details {
+  padding-top: 3em;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 2rem;
 }
 .video-container {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  z-index: 25;
+  z-index: 15;
   background-color: rgba(0, 0, 0, 0.8);
 }
 video {
-  height: 30vh;
+  height: auto;
+  width: 90%;
+  max-width: 600px;
   opacity: 0.6;
   border-radius: 7px;
   z-index: -5;
 }
 .details {
   width: 80vw;
-  max-width: 450px;
+  max-width: 550px;
+  text-align: left;
+  line-height: 1.7rem;
+  font-size: 0.9rem;
 }
 .project-info {
   color: rgba(87, 153, 197, 1);
   margin-top: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .btn-container {
   display: flex;
-  margin-top: 2em;
+  margin-top: 5em;
 }
 .live-link,
 .git-link {
   z-index: 5;
   text-decoration: none;
-  margin: 0 6vh 1em 6vh;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1em;
+  font-size: 0.9rem;
   background-color: rgba(0, 0, 0, 0.3);
   color: #378094;
   border-radius: 7px;
   border: none;
   padding: 0.5em;
+  margin: 0 1rem 0 1rem;
 }
 a:hover {
   cursor: pointer;
   color: rgb(182, 172, 97);
+}
+
+@media screen and (min-width: 700px) {
+  .wrapper {
+    padding-top: 9em;
+  }
+  .btn-container {
+    margin-top: 3em;
+  }
 }
 </style>

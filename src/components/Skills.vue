@@ -122,7 +122,7 @@ export default {};
   font-size: 100%;
 }
 .title-skills {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 900;
   position: relative;
   padding: 1em 0 0.5em 0;
@@ -158,7 +158,7 @@ export default {};
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto 5em auto;
 }
 .skill-icon {
@@ -181,10 +181,10 @@ export default {};
 .skill {
   color: rgba(87, 153, 197, 1);
   margin: 0.2em 0.1em;
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 #ror {
-  font-size: 1rem;
+  /* font-size: 0.85rem; */
 }
 #sass {
   background-color: rgba(87, 153, 197, 1);
@@ -194,7 +194,7 @@ export default {};
 
 @media screen and (min-width: 700px) {
   .skills-container {
-    width: 80vw;
+    width: 90vw;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -217,8 +217,12 @@ export default {};
     left: 0px;
     filter: blur(0.8px);
   }
+  .skill {
+    font-size: 0.95rem;
+    margin: 0.2em 0.2em;
+  }
   .skill-icon {
-    padding: 1rem;
+    padding: 0.75rem;
   }
   .icon {
     height: 2.7rem;

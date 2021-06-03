@@ -41,34 +41,17 @@ export default {
       showNav: false,
     };
   },
-  // watch: {
-  //   $route() {
-  //     this.showNav = false;
-  //   },
-  // },
 };
-// import { ref } from "vue";
-// export default {
-//   setup() {
-//     const showNav = ref(true);
-
-//     return { showNav };
-//   },
-// };
 </script>
 
 <style scoped>
 .slide-enter-from {
   opacity: 0.5;
   transform: translate(130%, 100%);
-  /* bottom: -50%;
-  right: -50%; */
 }
 .slide-enter-to {
   opacity: 1;
   transform: translate(0%, 0%);
-  /* bottom: 5%;
-  right: 0%; */
 }
 .slide-enter-active {
   transition: all 0.5s ease;
@@ -77,14 +60,10 @@ export default {
 .slide-leave-from {
   opacity: 1;
   transform: translate(0%, 0%);
-  /* bottom: 5%;
-  right: 0%; */
 }
 .slide-leave-to {
   opacity: 0.5;
   transform: translate(130%, 100%);
-  /* bottom: -50%;
-  right: -50%; */
 }
 .slide-leave-active {
   transition: all 0.5s ease;
@@ -100,38 +79,31 @@ export default {
   bottom: 1.2em;
   right: 1.6em;
   padding: 0.5em 0;
-  /* border: 1px solid rgba(4, 182, 226, 0.514); */
-  background-color: rgba(0, 0, 0, 0);
+  background-color: transparent;
   backdrop-filter: blur(4px);
   border-radius: 7px;
   z-index: 30;
 }
 .line-1 {
-  /* margin-bottom: 0.4rem; */
+  z-index: 5;
   height: 0.2em;
   width: 2.2em;
-  /* color: transparent; */
   background-color: rgba(27, 233, 233, 0.788);
-  /* border: 0.5px solid rgba(4, 182, 226, 1); */
 }
 .line-2 {
-  /* margin-bottom: 0.4rem; */
+  z-index: 5;
   height: 0.2em;
   width: 2.6em;
-  /* color: transparent; */
   background-color: rgba(255, 211, 17, 0.74);
-  /* border: 1px solid rgba(255, 211, 17, 0.74); */
 }
 .line-3 {
-  /* margin-bottom: 0.5rem; */
+  z-index: 5;
   height: 0.2em;
   width: 2.2em;
-  /* color: transparent; */
   background-color: rgba(27, 233, 233, 0.795);
-  /* border: 0.5px solid rgba(4, 182, 226, 1); */
 }
 .sidenav-container {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.582);
   border-radius: 40px 40px 0 50px;
   height: 500px;
   width: 60vw;

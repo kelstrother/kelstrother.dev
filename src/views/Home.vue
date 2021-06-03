@@ -559,14 +559,14 @@ span.O::after {
 
 @media screen and (min-width: 1024px) {
   .home {
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
+    /* overflow: hidden; */
+    /* width: 100vw; */
+    /* height: 100vh; */
   }
   .name-container {
-    top: 10%;
+    top: 5%;
     left: 25%;
-    transform: rotate(0deg);
+    /* transform: rotate(0deg); */
   }
   .job-title {
     top: 47%;
@@ -730,17 +730,6 @@ span.O::after {
     position: absolute;
     top: 0;
     left: 0;
-  }
-  span.O::before {
-    /* z-index: 10;
-    color: rgba(0, 0, 0, 0.952);
-    -webkit-text-stroke: 1px rgb(198, 237, 240);
-    transform: translate(1px, 3px); */
-  }
-  span.O::after {
-    /* z-index: 0;
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.671);
-    transform: translate(1.5px, 1.5px); */
   }
 }
 </style>

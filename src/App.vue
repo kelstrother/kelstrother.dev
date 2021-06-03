@@ -80,8 +80,6 @@ nav {
     font-weight: 900;
     text-decoration: none;
     letter-spacing: 3px;
-    /* justify-content: space-around; */
-    /* margin: 0 1rem; */
   }
   .link::before,
   .link::after {
@@ -139,16 +137,14 @@ nav {
 
 @media screen and (min-width: 1024px) {
   .link {
-    font-size: 2.8rem;
-    /* transform: rotate(15deg); */
+    font-size: 2.4rem;
     font-weight: 900;
   }
 }
 
 @media screen and (min-width: 1224px) {
   .link {
-    font-size: 2.9rem;
-    /* margin: 0 2.2rem; */
+    font-size: 2.5rem;
   }
 }
 </style>

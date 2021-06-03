@@ -79,7 +79,7 @@ export default {};
   z-index: 1;
   transform: translate(3px, -2px);
   color: rgba(33, 219, 219, 0.8);
-  -webkit-text-stroke: 2.4px rgba(207, 153, 3, 0.9);
+  -webkit-text-stroke: 2.4px rgba(231, 171, 4, 0.9);
   filter: blur(0.8px);
 }
 
@@ -90,15 +90,15 @@ export default {};
   .myname-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 35vh;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     transform: translate(-15%, 0%);
   }
   #fullname {
     /* margin: 3rem 3rem 0 0; */
-    font-size: 5.5rem;
+    font-size: 5.2rem;
     position: relative;
     font-weight: 900;
     z-index: 0;
@@ -118,29 +118,33 @@ export default {};
     -webkit-text-stroke: 1.5px rgb(0, 204, 255);
     color: black;
     transform: translate(4.5px, -4px);
+    /* text-shadow: 0 0 10px rgba(207, 153, 3, 0.9); */
+    text-shadow: 0 0 10px rgba(0, 204, 255, 0.459);
   }
   #fullname::after {
     /* transform: translate(3.7px, -2px); */
     z-index: 1;
     /* color: rgba(255, 255, 255, 0.637); */
     color: rgba(33, 219, 219, 0.8);
-    -webkit-text-stroke: 2.6px rgba(207, 153, 3, 0.9);
+    -webkit-text-stroke: 3px rgba(231, 171, 4, 0.9);
+    /* -webkit-text-stroke: 2.6px rgba(207, 153, 3, 0.9); */
     transform: translate(2px, -2px);
-    filter: blur(0.8px);
-    text-shadow: 0 0 10px rgba(0, 204, 255, 0.281);
+    filter: blur(1.5px);
+    /* text-shadow: 0 0 10px rgba(0, 204, 255, 0.281); */
   }
 }
 
 @media screen and (min-width: 1024px) {
   #fullname {
-    margin-top: 3rem;
-    font-size: 7rem;
+    transform: translate(10%, 25%);
+    /* margin-top: 5rem; */
+    font-size: 6rem;
     /* position: relative;
     font-weight: 900;
     position: relative;
     z-index: 1;
-    -webkit-text-stroke: 1.2px rgb(0, 204, 255);
-    letter-spacing: 0.225rem; */
+    -webkit-text-stroke: 1.2px rgb(0, 204, 255); */
+    letter-spacing: 0.5rem;
   }
   #fullname::before {
     /* -webkit-text-stroke: 1.2px rgb(0, 204, 255);

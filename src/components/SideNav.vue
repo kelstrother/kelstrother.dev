@@ -2,6 +2,66 @@
   <div class="mobile-container">
     <transition name="slide">
       <div v-if="showNav" class="sidenav-container">
+        <!-- <div class="mobile-social-container">
+          <section class="fb1">
+            <a href="https://www.facebook.com/kel.strother/" target="_blank">
+              <ph-facebook-logo
+                id="fb-logo"
+                class="social-icon"
+                :size="56"
+                weight="fill"
+            /></a>
+          </section>
+          <section class="fb2">
+            <ph-facebook-logo
+              class="social-icon"
+              id="fb-logo2"
+              :size="59"
+              weight="fill"
+            />
+          </section>
+          <section class="linked1">
+            <a href="https://www.linkedin.com/in/kelstrother/" target="_blank">
+              <ph-linkedin-logo
+                class="social-icon"
+                id="linked-logo"
+                :size="55"
+                weight="fill"
+            /></a>
+          </section>
+          <section class="linked2">
+            <ph-linkedin-logo
+              class="social-icon"
+              id="linked-logo2"
+              :size="57"
+              weight="fill"
+            />
+          </section> -->
+          <!-- <ph-instagram-logo
+            id="insta-logo"
+            class="social-icon"
+            :size="46"
+            weight="fill"
+          />
+          <ph-instagram-logo
+            id="insta-logo2"
+            class="social-icon"
+            :size="55"
+            weight="fill"
+          />
+          <ph-twitter-logo
+            id="twitter-logo"
+            class="social-icon"
+            :size="46"
+            weight="fill"
+          />
+          <ph-twitter-logo
+            id="twitter-logo2"
+            class="social-icon"
+            :size="55"
+            weight="fill"
+          /> -->
+        <!-- </div> -->
         <ul class="sn-ul">
           <li @click="showNav = !showNav" class="sn-link">
             <router-link data-text="home" class="sidenav-link" to="/"
@@ -45,6 +105,95 @@ export default {
 </script>
 
 <style scoped>
+.mobile-social-container {
+  display: flex;
+  /* height: 10%; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-top: 1rem; */
+  transform: rotate(-15deg);
+}
+.fb1 {
+  display: flex;
+  z-index: 5;
+  position: relative;
+  /* margin: 0;
+  padding: 0; */
+}
+.fb2 {
+  position: absolute;
+  top: -2px;
+  left: 14%;
+  z-index: -1;
+}
+.linked1 {
+  z-index: 5;
+  position: relative;
+  /* margin: 0;
+  padding: 0; */
+}
+.linked2 {
+  position: absolute;
+  top: -2px;
+  left: 55%;
+  z-index: -1;
+}
+#fb-logo {
+  /* position: relative; */
+  color: rgba(0, 0, 0, 0.963);
+  z-index: 5;
+}
+#fb-logo2 {
+  color: rgba(4, 182, 226, 0.836);
+  /* position: absolute; */
+  /* top: -1px;
+  left: 35px; */
+  z-index: -1;
+  filter: blur(3px) brightness(120%);
+}
+#linked-logo {
+  /* position: relative; */
+  color: rgba(0, 0, 0, 0.963);
+  z-index: 5;
+}
+#linked-logo2 {
+  color: rgba(4, 182, 226, 0.836);
+  /* position: absolute;
+  top: -1px;
+  left: 130px; */
+  z-index: -1;
+  filter: blur(3px) brightness(120%);
+}
+/* #fb-logo2:hover {
+  color: rgba(233, 212, 27, 0.795);
+} */
+/* #insta-logo {
+  z-index: 5;
+  color: rgba(0, 0, 0, 0.963);
+}
+#insta-logo2 {
+  color: rgba(4, 182, 226, 0.836);
+  position: absolute;
+  top: -2px;
+  left: 37%;
+  z-index: 0;
+  filter: blur(3px);
+}
+#twitter-logo {
+  color: rgba(0, 0, 0, 0.963);
+  z-index: 5;
+}
+#twitter-logo2 {
+  position: absolute;
+  top: -2px;
+  left: 70%;
+  color: rgba(4, 182, 226, 0.836);
+  z-index: 0;
+  filter: blur(3px);
+} */
 .slide-enter-from {
   opacity: 0.5;
   transform: translate(130%, 100%);
@@ -103,9 +252,9 @@ export default {
   background-color: rgba(27, 233, 233, 0.795);
 }
 .sidenav-container {
-  background: rgba(0, 0, 0, 0.582);
+  background: rgba(0, 0, 0, 0.6);
   border-radius: 40px 40px 0 50px;
-  height: 500px;
+  height: 550px;
   width: 60vw;
   backdrop-filter: blur(6px);
   position: fixed;
@@ -122,11 +271,12 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
-  height: 100%;
+  height: 75%;
   list-style: none;
+  margin-top: -2rem;
 }
 .sn-link {
-  justify-content: space-between;
+  /* justify-content: space-between; */
   transform: rotate(-15deg);
   font-size: 2rem;
 }

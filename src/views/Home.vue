@@ -36,7 +36,6 @@ export default {
   justify-content: space-evenly;
   align-items: center;
   height: 100%;
-  color: rgba(0, 0, 128, 0.925);
   width: 100vw;
 }
 .name-container {
@@ -60,11 +59,9 @@ export default {
   text-align: left;
   font-size: 2.5rem;
   font-weight: 900;
-  /* letter-spacing: 1.8px; */
   color: rgb(0, 0, 0);
-  -webkit-text-stroke: 1.5px rgb(0, 204, 255);
-  /* color: rgba(0, 0, 0, 1); */
-  /* -webkit-text-stroke: 1.5px rgb(45, 152, 179); */
+  /* -webkit-text-stroke: 2px rgb(0, 204, 255); */
+  /* -webkit-text-stroke: 2px rgb(45, 152, 179); */
   /* -webkit-text-stroke: 2px rgba(255, 187, 0, 0.795); */
   letter-spacing: 3.5px;
   z-index: 5;
@@ -79,13 +76,14 @@ export default {
 .webdev::before {
   z-index: 0;
   color: rgb(2, 137, 170);
-  -webkit-text-stroke: 1.5px rgb(0, 204, 255);
-  transform: translate(2.5px, -1px);
-  /* filter: blur(0.8px); */
+  -webkit-text-stroke: 1.75px rgba(255, 203, 60, 0.671);
+  /* -webkit-text-stroke: 1.5px rgba(0, 204, 255, 0.651); */
+  transform: translate(3.5px, -0.5px);
+  /* filter: blur(1px); */
 }
 .webdev::after {
   z-index: 5;
-  -webkit-text-stroke: 0.8px rgba(255, 203, 60, 0.863);
+  -webkit-text-stroke: 1.5px rgba(0, 147, 184, 0.9);
   transform: translate(1.5px, 1px);
 }
 span.dev {
@@ -107,16 +105,15 @@ span.dev::after {
 }
 span.dev::before {
   z-index: 0;
-  color: rgb(0, 204, 255);
-  /* color: rgba(255, 187, 0, 0.699); */
-  -webkit-text-stroke: 1.5px rgb(4, 207, 207);
-  /* -webkit-text-stroke: 3px rgb(0, 204, 255); */
+  color: rgba(0, 147, 184, 0.9);
+  /* -webkit-text-stroke: 2px rgb(4, 207, 207); */
+  -webkit-text-stroke: 1px rgb(29, 179, 248);
   transform: translate(1.5px, -1.1px);
   filter: blur(0.8px);
 }
 span.dev::after {
   z-index: 0;
-  -webkit-text-stroke: 1px rgb(29, 179, 248);
+  -webkit-text-stroke: 1.5px rgba(0, 255, 255, 0.63);
   transform: translate(1.5px, 1.5px);
 }
 span.eloper {
@@ -125,7 +122,7 @@ span.eloper {
   -webkit-text-stroke: 1.6px rgba(255, 192, 17, 0.877);
   transform: translate(-1.5px, -1.5px);
   position: absolute;
-  text-shadow: 3px 0 5px rgba(255, 230, 0, 0.226);
+  text-shadow: 3px 0 5px rgba(255, 230, 0, 0.2);
   /* letter-spacing: 4px; */
 }
 span.eloper::before,
@@ -138,20 +135,13 @@ span.eloper::after {
 span.eloper::before {
   z-index: 0;
   color: rgb(0, 204, 255);
-  /* color: rgba(255, 187, 0, 0.699); */
   -webkit-text-stroke: 1px rgb(4, 207, 207);
-  /* -webkit-text-stroke: 3px rgb(0, 204, 255); */
   transform: translate(1.5px, -1.1px);
   filter: blur(0);
-  /* z-index: 0;
-  color: rgba(255, 187, 0, 0.473);
-  -webkit-text-stroke: 3px rgb(0, 204, 255);
-  transform: translate(2.5px, -2.1px); */
-  /* letter-spacing: 2.2px; */
 }
 span.eloper::after {
   z-index: 0;
-  -webkit-text-stroke: 1px rgb(29, 179, 248);
+  -webkit-text-stroke: 1.5px rgba(0, 147, 184, 0.9);
   transform: translate(1.5px, 1.5px);
 }
 .outof {
@@ -564,13 +554,13 @@ span.O::after {
     /* height: 100vh; */
   }
   .name-container {
-    top: 5%;
+    top: 10%;
     left: 25%;
     /* transform: rotate(0deg); */
   }
   .job-title {
-    top: 47%;
-    left: 21.5%;
+    top: 51%;
+    left: 10%;
   }
   .webdev {
     /* z-index: 0; */
@@ -648,8 +638,8 @@ span.O::after {
     transform: translate(1.5px, 1.5px); */
   }
   .city-container {
-    top: 79%;
-    left: 45%;
+    top: 81%;
+    left: 52%;
   }
   .location {
     font-size: 4.2rem;
@@ -682,18 +672,14 @@ span.O::after {
   }
   .outof {
     display: flex;
-    top: 65%;
-    left: 25%;
+    top: 67%;
+    left: 45%;
     font-size: 3.5rem;
+    transform: rotate(-8deg);
   }
   span.C {
     top: 0;
     left: 105%;
-    /* color: rgba(255, 187, 0, 0.514);
-    z-index: 0;
-    -webkit-text-stroke: 2.4px rgb(0, 204, 255);
-    transform: translate(0.5px, -3px);
-    text-shadow: 3px 0 10px rgba(0, 247, 255, 0.123); */
   }
   span.C::before,
   span.C::after {

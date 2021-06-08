@@ -76,7 +76,7 @@ nav {
     position: relative;
     color: rgba(0, 0, 0, 0.377);
     -webkit-text-stroke: 1.55px rgba(4, 182, 226, 0.904);
-    font-size: 2.3rem;
+    font-size: 2.2rem;
     font-weight: 900;
     text-decoration: none;
     letter-spacing: 3px;

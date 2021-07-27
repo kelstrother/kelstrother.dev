@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    <h1 class="title" id="about.me">my name is Kel,</h1>
+    <h1 class="title" id="about.me">The name's Kel</h1>
+    <img class="blue-ink" src="../assets/img/blue-ink.png" alt="" />
+    <img class="blue-ink2" src="../assets/img/blue-ink.png" alt="" />
+    <img class="yellow-ink" src="../assets/img/yellow-ink.png" alt="" />
+    <img class="yellow-ink2" src="../assets/img/yellow-ink.png" alt="" />
     <div class="auto-bio">
       <p class="biography" id="part1">
         I live in Colorado. When I'm not creating things with code, I'm probably
@@ -12,61 +16,20 @@
         a difference.
       </p>
     </div>
-    <div class="mobile-social-container">
-      <div class="fb-container">
-        <section class="fb1">
-          <a href="https://www.facebook.com/kel.strother/" target="_blank">
-            <ph-facebook-logo id="fb-logo" class="social-icon" weight="fill"
-          /></a>
-        </section>
-        <section class="fb2">
-          <ph-facebook-logo class="social-blur" id="fb-logo2" weight="fill" />
-        </section>
-        <section class="fb3">
-          <ph-facebook-logo class="social-blur" id="fb-logo3" weight="fill" />
-        </section>
-      </div>
-      <div class="resume-container">
-        <section class="res1">
-          <a
-            href="https://docs.google.com/document/d/1OgsXexBqUcA2yoN8_w2MO-sDNqfUa44RCp7RX0-M6lM/edit?usp=sharing"
-            target="_blank"
-          >
-            <ph-file-text class="social-icon" id="res-icon" weight="fill"
-          /></a>
-        </section>
-        <section class="res2">
-          <ph-file-text class="social-blur" id="res-icon2" weight="fill" />
-        </section>
-        <section class="res3">
-          <ph-file-text class="social-blur" id="res-icon3" weight="fill" />
-        </section>
-      </div>
-      <div class="linked-container">
-        <section class="linked1">
-          <a href="https://www.linkedin.com/in/kelstrother/" target="_blank">
-            <ph-linkedin-logo
-              class="social-icon"
-              id="linked-logo"
-              weight="fill"
-          /></a>
-        </section>
-        <section class="linked2">
-          <ph-linkedin-logo
-            class="social-blur"
-            id="linked-logo2"
-            weight="fill"
-          />
-        </section>
-        <section class="linked3">
-          <ph-linkedin-logo
-            class="social-blur"
-            id="linked-logo3"
-            weight="fill"
-          />
-        </section>
-      </div>
+    <div class="download">
+      <a
+        class="dl-res"
+        href="/Resume/Kel_Strother-Resume.pdf"
+        download="Kel Strother Resume"
+      >
+        <p class="dl-my-res">Download My Resume</p>
+      </a>
     </div>
+    <img
+      class="guitars"
+      src="../assets/img/2_guitars.png"
+      alt="kel with dueling guitars"
+    />
   </div>
 </template>
 
@@ -76,229 +39,304 @@ export default {};
 
 <style scoped>
 .container {
-  /* margin-top: 1em; */
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.icon-text {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  bottom: 24%;
-}
-.fb,
-.resume,
-.linked {
-  color: rgba(33, 182, 219, 0.8);
-}
-.mobile-social-container {
-  /* padding-top: 1em; */
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  /* margin-top: 2rem; */
-  margin-bottom: 2rem;
-}
-.fb-container {
-  display: flex;
-  position: relative;
-}
-
-.fb1 {
-  display: flex;
-  z-index: 5;
-  font-size: 2.5rem;
-}
-#fb-logo {
-  color: rgb(0, 0, 0);
-}
-#fb-logo:hover {
-  color: rgba(255, 255, 255, 0.6);
-  transition: 0.2s ease-in-out;
-}
-.fb2 {
-  font-size: 2.6rem;
-  position: absolute;
-  top: 4px;
-  left: 0;
-  z-index: 1;
-  filter: blur(3px);
-  color: rgba(4, 182, 226, 0.8);
-}
-.fb3 {
-  font-size: 2.6rem;
-  position: absolute;
-  top: -5px;
-  left: 0;
-  z-index: 0;
-  filter: blur(3px);
-  color: rgba(252, 227, 5, 0.8);
-}
-.resume-container {
-  display: flex;
-  position: relative;
-}
-.res1 {
-  font-size: 2.5rem;
-  z-index: 5;
-}
-#res-icon {
-  color: rgb(0, 0, 0);
-}
-.res2 {
-  font-size: 2.6rem;
-  position: absolute;
-  top: 5px;
-  left: -3px;
-  z-index: 1;
-  filter: blur(3px);
-  color: rgba(4, 182, 226, 0.8);
-}
-.res3 {
-  font-size: 2.6rem;
-  position: absolute;
-  top: -5px;
-  left: 1px;
-  z-index: 0;
-  filter: blur(3px);
-  color: rgba(252, 227, 5, 0.8);
-}
-.linked-container {
-  display: flex;
-  position: relative;
-}
-.linked1 {
-  font-size: 2.5rem;
-  z-index: 5;
-}
-#linked-logo {
-  color: rgb(0, 0, 0);
-}
-#linked-logo:hover {
-  color: rgba(255, 255, 255, 0.6);
-  transition: 0.2s ease-in-out;
-}
-.linked2 {
-  font-size: 2.6rem;
-  position: absolute;
-  top: 5px;
-  left: -2px;
-  z-index: 1;
-  filter: blur(3px);
-  color: rgba(4, 182, 226, 0.8);
-}
-.linked3 {
-  font-size: 2.6rem;
-  position: absolute;
-  top: -5px;
-  left: 2px;
-  z-index: 0;
-  filter: blur(3px);
-  color: rgba(252, 227, 5, 0.8);
+  place-items: center;
 }
 .title {
-  margin: 1rem 1rem 0 1rem;
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
   color: rgba(0, 0, 0, 1);
-  -webkit-text-stroke: 1px rgb(242, 242, 255);
-  font-size: 2.5rem;
-  font-weight: 900;
-  letter-spacing: 0.3rem;
+  position: absolute;
+  top: 10vh;
+  left: 11vw;
+  -webkit-text-stroke: 1px rgba(242, 242, 255, 0.7);
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
   text-align: center;
   transform: rotate(-5deg);
-  z-index: 0;
-}
-.title::before,
-.title::after {
-  content: "my name is Kel,";
-  position: absolute;
-  top: 0;
-  left: 0;
+  z-index: 3;
 }
 .title::before {
   z-index: 2;
-  -webkit-text-stroke: 1.5px rgba(4, 182, 226, 1);
+  content: "The name's Kel";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke: 0.5px rgba(4, 182, 226, 1);
   transform: translate(4.5px, -4px);
-  transform: rotate(1.3deg);
+  transform: rotate(1.1deg);
 }
-.title::after {
-  z-index: 1;
-  color: rgba(33, 219, 219, 0.8);
-  /* color: rgba(4, 182, 226, 0.9); */
-  -webkit-text-stroke: 2px rgba(253, 209, 11, 0.8);
-  transform: translate(2.9px, -2px);
-  /* filter: blur(1px); */
+.yellow-ink,
+.yellow-ink2,
+.blue-ink,
+.blue-ink2 {
+  display: none;
+  z-index: 0;
+  position: absolute;
+  opacity: 0.7;
+}
+.yellow-ink {
+  top: -5%;
+  right: -40%;
+}
+.blue-ink {
+  bottom: 0%;
+  width: 30rem;
+  height: auto;
+  left: 0%;
+  transform: rotateX(180deg);
+}
+.guitars {
+  width: 90vw;
+  max-width: 500px;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .auto-bio {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  position: absolute;
+  top: 25%;
+  left: 18%;
   align-items: center;
-  font-family: "Poppins";
-  color: rgba(33, 182, 219, 0.8);
-  margin: 0 2em;
+  color: rgba(4, 182, 226, 0.7);
   width: 75vw;
   font-size: 1rem;
-  max-width: 650px;
+  max-width: 450px;
   z-index: 10;
+  transform: rotate(-5deg);
 }
-#part1 {
-  margin-top: 2em;
-  text-indent: 25px;
+#part1,
+#part2 {
+  text-indent: 0.75em;
   display: inline-block;
 }
 #part2 {
   margin-top: 1em;
-  text-indent: 25px;
-  display: inline-block;
 }
-.shape-3 {
-  height: 20vh;
-  width: 100vw;
-  z-index: 1;
-  background-color: rgba(41, 113, 126, 0.2);
-  clip-path: polygon(
-    45% 0,
-    0 100%,
-    100% 9%,
-    100% 70%,
-    26% 100%,
-    100% 70%,
-    0 36%,
-    100% 100%
+a {
+  text-decoration: none;
+}
+.download {
+  display: flex;
+  overflow: hidden;
+  position: absolute;
+  transform: rotate(-5deg);
+  top: 60%;
+  left: 26%;
+  flex-direction: column;
+  width: 60vw;
+  background: linear-gradient(
+    175deg,
+    rgb(1, 97, 138) -10%,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0) 70%,
+    rgb(1, 97, 138) 150%
+  );
+  height: 5vh;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 0 0 3px 0.5px var(--deepblue);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  outline: 3px solid transparent;
+}
+.download::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 110%;
+  height: 0.75px;
+  background-color: rgba(252, 252, 252, 0.6);
+  opacity: 0;
+}
+.download::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 110%;
+  height: 0.75px;
+  background-color: rgba(252, 252, 252, 0.6);
+  opacity: 0;
+}
+.download:hover {
+  background: linear-gradient(
+    175deg,
+    rgba(253, 209, 11, 0.3) -10%,
+    rgba(0, 0, 0, 0) 45%,
+    rgba(0, 0, 0, 0) 70%,
+    rgba(253, 209, 11, 0.6) 150%
   );
 }
-
+.download:hover .dl-my-res {
+  color: rgba(4, 182, 226, 0.8);
+}
+.dl-my-res {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: rgba(253, 209, 11, 0.6);
+  transition: 0.3s ease-in-out;
+}
 @media screen and (min-width: 700px) {
   .title {
-    font-size: 4rem;
-  }
-  .social-icon {
+    top: 23%;
+    left: 14%;
     font-size: 3.8rem;
   }
-  .social-blur {
-    font-size: 4rem;
-  }
   .auto-bio {
-    font-size: 1.2rem;
+    top: 35%;
+    left: 20%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  .download {
+    top: 55%;
+  }
+  .dl-my-res {
+    font-size: 1.1rem;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1023px) {
   .title {
-    margin-top: 1.5em;
+    top: 20%;
+    left: 8%;
   }
-  .container {
-    justify-content: space-evenly;
+  .yellow-ink {
+    display: flex;
+    width: 40vw;
+    top: 40%;
+    right: 5%;
+    transform: scaleY(1.5) rotateX(180deg);
+  }
+  .blue-ink {
+    display: flex;
+    width: 35vw;
+    bottom: 10%;
+    left: 65%;
+    transform: scaleY(1.4) rotateZ(180deg);
+  }
+  .auto-bio {
+    top: 35%;
+    left: 13%;
+  }
+  .download {
+    top: 65%;
+    left: 17%;
+    width: 20rem;
+    transition: all 0.3s;
+  }
+  .download::before,
+  .download::after {
+    transition: all 0.3s;
+  }
+  .download:hover {
+    background: linear-gradient(
+      175deg,
+      rgba(253, 209, 11, 0.3) -10%,
+      rgba(0, 0, 0, 0) 45%,
+      rgba(0, 0, 0, 0) 70%,
+      rgba(253, 209, 11, 0.6) 150%
+    );
+    overflow: visible;
+  }
+  .download:hover:before {
+    left: 0;
+    opacity: 1;
+  }
+  .download:hover:after {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .title {
+    left: 14%;
+    font-size: 4.5rem;
+  }
+  .auto-bio {
+    left: 18%;
+    max-width: 500px;
+  }
+  .download {
+    top: 60%;
+    left: 25%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .title {
+    font-size: 5rem;
+    top: 22%;
+    left: 20%;
+  }
+  .auto-bio {
+    max-width: 600px;
+    left: 23.5%;
+  }
+  .download {
+    width: 25rem;
+    max-width: 500px;
+    top: 55%;
+    left: 30%;
+  }
+}
+
+@media screen and (min-width: 2550px) {
+  .title {
+    font-size: 5.5rem;
+    top: 25%;
+    left: 27%;
+    letter-spacing: 5px;
+  }
+  .yellow-ink {
+    top: 25%;
+    right: 10%;
+  }
+  .yellow-ink2 {
+    display: flex;
+    width: 30vw;
+    transform: scaleX(1.5) rotate(0deg);
+    opacity: 0.1;
+    top: 10%;
+    left: 10%;
+  }
+  .blue-ink {
+    width: 30vw;
+    left: 70%;
+  }
+  .blue-ink2 {
+    display: flex;
+    width: 30vw;
+    bottom: 10%;
+    left: 7%;
+    background: none;
+    transform: scaleY(1.4) scaleX(1.4) rotateX(180deg);
+    opacity: 0.2;
+  }
+  .auto-bio {
+    top: 37%;
+    left: 29%;
+    max-width: 650px;
+    font-size: 1.45rem;
+  }
+  .download {
+    top: 57%;
+    left: 35%;
+  }
+  .dl-my-res {
+    font-size: 1.4rem;
+  }
+  .guitars {
+    max-width: 750px;
+    width: 50rem;
   }
 }
 </style>

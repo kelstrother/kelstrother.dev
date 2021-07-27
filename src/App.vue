@@ -1,150 +1,226 @@
 <template>
+  <SideNav />
+  <section>
+    <span class="dot1"></span>
+    <span class="dot2"></span>
+    <span class="dot3"></span>
+    <span class="dot4"></span>
+    <span class="dot5"></span>
+  </section>
   <div class="container">
-    <SideNav />
-    <nav id="desktop-nav">
-      <ul class="nav-ul">
-        <li>
-          <router-link to="/" data-text="home" class="link">home</router-link>
-        </li>
-        <li>
-          <router-link to="/mywork" data-text="my.work" class="link"
-            >my.work</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/about" data-text="about.me" class="link"
-            >about.me</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/contact" data-text="contact" class="link"
-            >contact</router-link
-          >
-        </li>
-      </ul>
-    </nav>
+    <div class="perspective-menu">
+      <div class="perspective-link">
+        <router-link to="/" data-text="home" id="home" class="link"
+          >home</router-link
+        >
+      </div>
+      <div class="perspective-link">
+        <router-link to="/mywork" data-text="my.work" id="work" class="link"
+          >my.work</router-link
+        >
+      </div>
+      <div class="perspective-link">
+        <router-link to="/about" data-text="about.me" id="about" class="link"
+          >about.me</router-link
+        >
+      </div>
+      <div class="perspective-link">
+        <router-link to="/contact" data-text="contact" id="contact" class="link"
+          >contact</router-link
+        >
+      </div>
+    </div>
+    <Copyright />
     <router-view />
   </div>
 </template>
-
 <script>
 import SideNav from "./components/SideNav";
+import Copyright from "./components/Copyright.vue";
 export default {
-  components: { SideNav },
+  components: { SideNav, Copyright },
 };
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&family=Sen:wght@400;700;800&display=swap");
 #app {
   overflow: auto;
-  background: rgb(0, 0, 0);
-  /* background-image: linear-gradient(rgb(18, 20, 22) 20%, rgb(2, 18, 37) 100%); */
-  background-image: linear-gradient(rgb(0, 0, 0) 20%, rgb(10, 22, 37) 100%);
-  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(rgb(0, 0, 0) 15%, rgb(0, 10, 20) 110%);
+  font-family: "Lexend", "Poppins", sans-serif;
   height: 100vh;
   width: 100vw;
 }
-nav {
+.perspective-menu {
+  z-index: 25;
   display: none;
 }
-
+/* .dot1 {
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(205, 164, 0);
+  z-index: 70;
+  animation: splat-1 2s linear 1s both;
+}
+.dot2 {
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  width: 10px;
+  height: 10px;
+  border-radius: 40%;
+  background: rgb(205, 164, 0);
+  z-index: 70;
+  animation: splat-2 2s linear 1s both;
+}
+.dot3 {
+  position: absolute;
+  top: 10%;
+  right: 30%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(4, 182, 226, 1);
+  z-index: 25;
+  animation: splat-3 2s linear 1s both;
+}
+.dot4 {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--brightwhite);
+  z-index: 25;
+  animation: splat-4 1s linear 1s both;
+}
+.dot5 {
+  position: absolute;
+  top: 50%;
+  right: 70%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--deepblue);
+  z-index: 25;
+  animation: transit 1s linear 1s both;
+} */
 @media screen and (min-width: 700px) {
-  nav {
-    z-index: 100;
+  .perspective-menu {
+    z-index: 50;
     position: fixed;
-    height: 15vh;
+    height: 10vh;
     width: 100%;
     top: 0;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.85);
   }
-  .nav-ul {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    align-items: center;
+  .perspective-link {
+    z-index: 100;
+    font-size: 1.8rem;
+    font-weight: 800;
+    transform: rotate(5deg);
   }
   .link {
-    transform: rotate(15deg);
-    font-family: "Poppins", Arial, sans-serif;
-    display: inline-block;
-    position: relative;
-    color: rgba(0, 0, 0, 0.377);
-    -webkit-text-stroke: 1.55px rgba(4, 182, 226, 0.904);
-    font-size: 2.2rem;
-    font-weight: 900;
     text-decoration: none;
-    letter-spacing: 3px;
+    z-index: 100;
+    color: rgba(0, 0, 0, 1);
+    -webkit-text-stroke: 0.9px rgba(4, 182, 226, 1);
+    filter: brightness(130%);
+    transform: rotate3d(0.5, 0.5, 0, -25deg) translate3d(0, 0.2rem, 0px);
+    letter-spacing: 2px;
+    transition: all 0.2s ease-in-out;
   }
-  .link::before,
   .link::after {
     content: attr(data-text);
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
-    transition: 0.2s;
-  }
-  .link::before {
-    -webkit-text-stroke: 0.75px rgb(250, 195, 15);
-    transform: translate(0.75px, -1.4px);
-    letter-spacing: 2.8px;
-    z-index: -1;
-  }
-  .link:hover {
-    z-index: 0;
-    color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1.25px rgb(242, 242, 255);
-    transition: 0.2s;
-  }
-  .link:hover::before {
-    z-index: 2;
-    color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1.5px rgba(4, 182, 226, 0.9);
-    transform: translate(7px, -5px);
-    filter: brightness(120%);
-  }
-  .link:hover::after {
-    z-index: 1;
-    color: rgba(33, 219, 219, 0.445);
-    -webkit-text-stroke: 2px rgba(240, 205, 48, 1);
-    transform: translate(4px, -3px);
+    letter-spacing: 2px;
+    z-index: -2;
+    color: rgba(255, 255, 255, 0);
+    -webkit-text-stroke: 0px rgba(255, 255, 255, 0);
+    transform: rotate3d(0.9, 0.5, -1, 90deg) skew(0, 0deg) scale(1, 2);
+    transition: all 0.5s ease-in-out;
   }
   .router-link-exact-active {
-    z-index: 0;
+    -webkit-text-stroke: 0.9px var(--brightgold);
     color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1.25px rgb(242, 242, 255);
-  }
-  .router-link-exact-active::before {
-    z-index: 2;
-    color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 1.5px rgba(4, 182, 226, 0.9);
-    transform: translate(7px, -4.5px);
-    filter: brightness(120%);
+    transform: translate3d(0, 0.2rem, 0px) rotate3d(0.5, -0.5, 0, -25deg);
+    font-size: 2.2rem;
+    z-index: 3;
   }
   .router-link-exact-active::after {
-    -webkit-text-stroke: 2px rgba(255, 189, 6, 0.9);
-    filter: blur(0.75px) brightness(120%);
-    color: rgba(33, 219, 219, 0.445);
-    transform: translate(4px, -2.5px);
-    z-index: 1;
+    transform: rotate3d(0.9, 0.5, -1, 90deg) skew(0, 25deg) scale(1, 2);
+    color: rgba(255, 255, 255, 0.25);
+    z-index: -1;
+    animation: color-blind 6s infinite ease;
   }
 }
-
 @media screen and (min-width: 1024px) {
-  .link {
-    font-size: 2.4rem;
-    font-weight: 900;
+  .perspective-menu {
+    height: 13vh;
+  }
+  .perspective-link {
+    font-size: 2.5rem;
+  }
+  .perspective-link:hover .link {
+    -webkit-text-stroke: 0.9px rgba(4, 182, 226, 1);
+    transform: translate3d(0, 0.2rem, 0px) rotate3d(0.5, -0.5, 0, -25deg);
+    font-size: 2.7rem;
+  }
+  .perspective-link:hover .link::after {
+    color: rgba(207, 178, 13, 0.2);
+    transform: rotate3d(0.9, 0.5, -1, 90deg) skew(0, 25deg) scale(1, 2);
+  }
+  .router-link-exact-active {
+    font-size: 2.7rem;
   }
 }
 
-@media screen and (min-width: 1224px) {
-  .link {
-    font-size: 2.5rem;
+@media screen and (min-width: 1440px) {
+  .perspective-menu {
+    height: 10vh;
+  }
+  .perspective-link {
+    font-size: 2.7rem;
+  }
+  .router-link-exact-active {
+    font-size: 2.9rem;
+  }
+  .perspective-link:hover .link {
+    -webkit-text-stroke: 0.9px rgba(4, 182, 226, 1);
+    transform: translate3d(0, 0.2rem, 0px) rotate3d(0.5, -0.5, 0, -25deg);
+    font-size: 2.9rem;
+  }
+}
+@media screen and (min-width: 2550px) {
+  .perspective-menu {
+    justify-content: space-around;
+    /* border-bottom: 1px outset var(--deepgold);
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 25;
+    filter: drop-shadow(0 3px 25px rgba(4, 182, 226, 0.2)); */
+  }
+  .perspective-link {
+    font-size: 2.98rem;
+    transform: rotate(10deg);
+  }
+  .router-link-exact-active {
+    font-size: 3.2rem;
+  }
+  .perspective-link:hover .link {
+    -webkit-text-stroke: 0.9px rgba(4, 182, 226, 1);
+    transform: translate3d(0, 0.2rem, 0px) rotate3d(0.5, -0.5, 0, -25deg);
+    font-size: 3.2rem;
   }
 }
 </style>

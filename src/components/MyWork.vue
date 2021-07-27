@@ -9,7 +9,6 @@
       >
         <router-link
           :to="{ name: 'ProjectSummary', params: { id: project.id } }"
-          target="_blank"
         >
           <div class="single">
             <h2 class="project-name">{{ project.name }}</h2>
@@ -36,7 +35,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .work-box {
   display: flex;
   flex-direction: column;
@@ -49,11 +48,11 @@ export default {
   padding: 1em 0 0.5em 0;
   z-index: 0;
   color: rgba(0, 0, 0, 1);
-  -webkit-text-stroke: 0.9px rgb(242, 242, 255);
+  -webkit-text-stroke: 1px rgb(242, 242, 255);
   letter-spacing: 0.4rem;
+  animation: title-warp 5s infinite both;
 }
-.title-work::before,
-.title-work::after {
+.title-work::before {
   padding-top: 1em;
   content: "my.work";
   position: absolute;
@@ -62,17 +61,10 @@ export default {
 }
 .title-work::before {
   z-index: 2;
-  -webkit-text-stroke: 1.5px rgba(4, 182, 226, 1);
+  -webkit-text-stroke: 1px rgba(4, 182, 226, 1);
   transform: translate(4.5px, -4px);
   transform: rotate(2.2deg);
   letter-spacing: 0.41rem;
-}
-.title-work::after {
-  z-index: 1;
-  color: rgba(33, 219, 219, 0.8);
-  filter: blur(0.55px);
-  -webkit-text-stroke: 1.5px rgb(255, 208, 0);
-  transform: translate(2.9px, -2px);
 }
 .my-work-container {
   display: flex;
@@ -92,27 +84,26 @@ export default {
   color: #378094;
 }
 .project-name {
-  text-decoration: none;
-  letter-spacing: 1.2px;
-  color: rgba(4, 182, 226, 1);
-  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--brightblue);
+  font-size: 1.6rem;
+  z-index: 5;
+  transition: all 0.25s;
 }
 .project-img {
   border-radius: 7px;
   height: 200px;
   width: 300px;
   transform: scale(1);
-  transition: transform 0.3s ease;
-}
-.project-img:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 .project-description {
-  color: rgba(87, 153, 197, 1);
+  color: var(--deepblue);
   font-weight: 400;
   padding-bottom: 1em;
   font-size: 0.9rem;
+  transition: all 0.25s;
 }
 .single {
   display: flex;
@@ -127,23 +118,20 @@ export default {
 }
 a {
   text-decoration: none;
-  color: rgba(87, 153, 197, 1);
-}
-a:hover {
-  cursor: pointer;
-  color: goldenrod;
-  -webkit-text-stroke: 1.5px rgba(255, 227, 13, 0.322);
 }
 
 @media screen and (min-width: 700px) {
+  .my-work-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 9em;
+  }
   .title-work {
     display: none;
-  }
-  .work-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   .single {
     margin: 0 0.5rem;
@@ -151,40 +139,67 @@ a:hover {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    perspective: 500px;
+  }
+  .single:hover {
+    cursor: pointer;
   }
   .project-name {
+    color: var(--brightblue);
     font-size: 1.7rem;
   }
+  .single:hover .project-name {
+    color: var(--brightgold);
+    transform: scaleX(1) scaleY(1.1) scaleZ(1.5) rotateX(5deg) rotateY(-3deg)
+      rotateZ(-3deg) translateY(10px) translateZ(-10px);
+  }
   .project-description {
+    color: var(--deepblue);
     font-size: 1rem;
+  }
+  .single:hover .project-description {
+    color: var(--brightblue);
+    transform: scaleX(1) scaleY(1.1) scaleZ(1.5) rotateX(5deg) rotateY(-3deg)
+      rotateZ(-3deg) translateY(10px) translateZ(-10px);
   }
   .project-img {
     width: 18em;
     height: 12em;
+    filter: brightness(85%);
+    transform-style: preserve-3d;
   }
-  .title-work {
-    display: none;
-    top: 10vh;
-    z-index: 0;
-    font-size: 3rem;
-  }
-  .my-work-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    padding-top: 9em;
+  .single:hover .project-img {
+    transform: scaleX(1) scaleY(1.1) scaleZ(1.5) rotateX(5deg) rotateY(-3deg)
+      rotateZ(-3deg) translateY(10px) translateZ(-10px);
+    filter: brightness(130%);
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .my-work-container {
+    padding-top: 11em;
+  }
   .project-img {
     width: 25em;
     height: 15em;
   }
+}
+@media screen and (min-width: 2550px) {
   .my-work-container {
-    padding-top: 11em;
+    padding-top: 15em;
+  }
+  .project-img {
+    width: 40em;
+    height: 20em;
+  }
+  .project-name {
+    font-size: 2.3rem;
+  }
+  .project-description {
+    font-size: 1.3rem;
+  }
+  .single {
+    padding-bottom: 7em;
   }
 }
 </style>

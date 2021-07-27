@@ -1,168 +1,135 @@
 <template>
-  <div class="container">
-    <div class="myname-container">
-      <h1 id="fullname">Kel Strother</h1>
-    </div>
-    <div class="mobile-name-container">
-      <p class="kel">Kel</p>
-      <p class="strother">Strother</p>
+  <div class="perspective-container">
+    <div class="perspective-name">
+      <div class="name-line"></div>
+      <div class="name-line">
+        <p id="kel" class="text-line">Kel</p>
+      </div>
+      <div class="name-line">
+        <p id="strother2" class="text-line">Strother</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Name",
+};
 </script>
 
 <style>
-.myname-container {
-  display: none;
+.perspective-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.kel {
-  margin: 1rem 0 0 0;
-  font-size: 3.4rem;
-  font-weight: 900;
+.perspective-name {
+  perspective: 500px;
+  font-family: "Lexend";
+  font-size: 65px;
+  position: absolute;
+  top: -2em;
+  left: -1.75em;
+}
+.name-line {
+  perspective: 500px;
+  transform-style: preserve-3d;
+  height: 57px;
+  overflow: hidden;
   position: relative;
-  display: inline-block;
-  z-index: 0;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px rgb(242, 242, 255);
-  letter-spacing: 0.2rem;
 }
-.kel::before,
-.kel::after {
-  content: "Kel";
-  position: absolute;
-  top: 0;
-  left: 0;
+.text-line {
+  margin: 0;
+  height: 57px;
+  line-height: 57px;
+  letter-spacing: 3.5px;
 }
-.kel::before {
-  z-index: 2;
-  transform: translate(7px, -4.5px);
-  color: rgba(0, 0, 0, 1);
-  -webkit-text-stroke: 2.2px rgba(0, 147, 184, 0.9);
-  filter: brightness(110%);
+.name-line:nth-child(2) {
+  transform-style: preserve-3d;
+  transform: skew(0deg, -20deg) scale(1.1, 1.5);
+  left: 2rem;
+  font-weight: 200;
+  color: var(--deepblue);
 }
-.kel::after {
-  z-index: 1;
-  transform: translate(4px, -3px);
-  -webkit-text-stroke: 2.5px rgb(209, 154, 2);
-  filter: blur(0.75px) brightness(120%);
-  color: rgba(0, 255, 255, 0.555);
+.name-line:nth-child(3) {
+  transform-style: preserve-3d;
+  transform: skew(70deg, -20deg) scaley(0.6);
+  left: 3rem;
+  letter-spacing: 4px;
+  font-weight: 100;
+  -webkit-text-stroke: 0 rgba(255, 255, 255, 0.253);
 }
-.strother {
-  margin: 1rem 0 0 0;
-  font-size: 3.4rem;
-  font-weight: 900;
-  position: absolute;
-  top: 3.5rem;
-  left: 2.5rem;
-  display: inline-block;
-  z-index: 0;
-  color: rgba(0, 0, 0, 0);
-  -webkit-text-stroke: 1px rgb(242, 242, 255);
-  letter-spacing: 0.2rem;
-}
-.strother::before,
-.strother::after {
-  content: "Strother";
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-.strother::before {
-  z-index: 2;
-  transform: translate(7px, -4.5px);
-  color: rgba(0, 0, 0, 1);
-  -webkit-text-stroke: 2.2px rgba(0, 147, 184, 0.9);
-  filter: brightness(110%);
-}
-.strother::after {
-  z-index: 1;
-  /* transform: translate(3px, -2px); */
-  transform: translate(4px, -3px);
-  /* -webkit-text-stroke: 2px rgba(255, 189, 6, 0.9); */
-  -webkit-text-stroke: 2.5px rgb(209, 154, 2);
-  filter: blur(0.75px) brightness(120%);
-  /* color: rgba(33, 219, 219, 0.445); */
-  color: rgba(0, 255, 255, 0.555);
+#strother2 {
+  color: transparent;
+  background: linear-gradient(80deg, var(--deepwhite) 63%, var(--deepblue) 65%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 @media screen and (min-width: 700px) {
-  .mobile-name-container {
-    display: none;
+  .perspective-name {
+    font-size: 6rem;
+    top: 12rem;
+    left: -10rem;
   }
-  .myname-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    height: 35vh;
-    width: 100%;
-    align-items: center;
-    transform: translate(-15%, 0%);
+  .name-line {
+    height: 80px;
   }
-  #fullname {
-    font-size: 5.2rem;
-    position: relative;
-    font-weight: 900;
-    z-index: 0;
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1.7px rgb(219, 219, 219);
-    letter-spacing: 0.225rem;
-  }
-  #fullname::before,
-  #fullname::after {
-    content: "Kel Strother";
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  #fullname::before {
-    z-index: 2;
-    transform: translate(10px, -4.5px);
-    color: rgba(0, 0, 0, 1);
-    -webkit-text-stroke: 2.75px rgba(0, 147, 184, 0.9);
-    text-shadow: 0 0 10px rgba(0, 204, 255, 0.452);
-    /* filter: brightness(110%); */
-  }
-  #fullname::after {
-    z-index: 1;
-    filter: blur(0.75px) brightness(105%);
-    color: rgba(33, 219, 219, 0.445);
-    /* -webkit-text-stroke: 2.6px rgba(207, 153, 3, 0.9); */
-    -webkit-text-stroke: 3px rgb(209, 154, 2);
-    transform: translate(5px, -2px);
+  .text-line {
+    height: 80px;
+    line-height: 80px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  #fullname {
-    transform: translate(10%, 25%);
+  .perspective-name {
     font-size: 6rem;
-    letter-spacing: 0.5rem;
+    top: -2rem;
+    left: -3.8em;
   }
-  #fullname::before {
-    /* -webkit-text-stroke: 1.2px rgb(0, 204, 255);
-    color: black;
-    top: 0;
-    left: 0;
-    position: absolute; */
-    /* transform: translate(0px, 3px); */
+  .name-line {
+    height: 90px;
   }
-  #fullname::after {
-    /* color: rgba(33, 219, 219, 0.5); */
-    /* -webkit-text-stroke: 3px rgba(33, 219, 219, 0.5); */
-    /* -webkit-text-stroke: 3px rgb(2, 181, 212); */
-    /* content: "Kel Strother";
-    position: absolute;
-    z-index: 1;
-    color: rgba(255, 255, 255, 0.637);
-    -webkit-text-stroke: 2px rgba(194, 145, 12, 0.808);
-    top: 0;
-    left: 0;
-    transform: translate(1.5px, -1.5px); */
-    text-shadow: 0 0 10px rgba(0, 204, 255, 0.281);
-    /* text-shadow: 0 0 10px rgba(255, 217, 0, 0.582); */
+  .text-line {
+    height: 90px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .perspective-name {
+    font-size: 8rem;
+    top: 0.5rem;
+    left: -4.5em;
+  }
+  .name-line {
+    height: 105px;
+  }
+  .text-line {
+    height: 105px;
+    line-height: 105px;
+  }
+  .perspective-name:hover p {
+    transform: translate(0, -105px);
+  }
+}
+@media screen and (min-width: 2550px) {
+  .perspective-name {
+    font-size: 10rem;
+  }
+  .name-line {
+    height: 155px;
+  }
+  .text-line {
+    height: 155px;
+    line-height: 155px;
+  }
+  .name-line:nth-child(2) {
+    transform: skew(0deg, -20deg) scale(1.2, 1.7);
+  }
+  .name-line:nth-child(3) {
+    transform: skew(70deg, -20deg) scaley(0.7) scaleX(1.2);
   }
 }
 </style>

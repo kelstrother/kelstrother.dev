@@ -1,9 +1,7 @@
 import { createApp } from "vue";
-import PhosphorVue from "phosphor-vue";
 import App from "./App.vue";
 import router from "./router";
+// import kwesforms from "kwesforms";
 import "./assets/global.css";
 
-// const app = createApp(App);
-// app.use(PhosphorVue);
-createApp(App).use(PhosphorVue).use(router).mount("#app");
+createApp(App).use(router).mount("#app");

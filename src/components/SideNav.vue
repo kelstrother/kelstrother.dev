@@ -71,7 +71,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: transparent;
   filter: drop-shadow(2px 5px 2px rgba(0, 0, 0, 0.35));
   border-radius: 10px;
   align-items: center;
@@ -107,10 +107,9 @@ span {
   background: rgba(0, 0, 0, 0.5);
   border-radius: 40px 40px 0 50px;
   height: 550px;
-  border-left: 0.5px inset var(--brightblue);
-  border-top: 0.5px inset var(--brightblue);
-  /* border-left: 0.5px inset var(--brightblue); */
-  width: 55vw;
+  border-left: 0.5px outset var(--deepblue);
+  border-top: 0.5px outset var(--deepblue);
+  width: 58vw;
   backdrop-filter: blur(6px);
   box-shadow: -5px -2px 15px rgba(0, 0, 0, 0.5);
   position: fixed;

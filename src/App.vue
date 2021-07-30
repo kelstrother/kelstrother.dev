@@ -1,12 +1,5 @@
 <template>
   <SideNav />
-  <section>
-    <span class="dot1"></span>
-    <span class="dot2"></span>
-    <span class="dot3"></span>
-    <span class="dot4"></span>
-    <span class="dot5"></span>
-  </section>
   <div class="container">
     <div class="perspective-menu">
       <div class="perspective-link">
@@ -56,61 +49,6 @@ export default {
   z-index: 25;
   display: none;
 }
-/* .dot1 {
-  position: absolute;
-  top: 10%;
-  right: 20%;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: rgb(205, 164, 0);
-  z-index: 70;
-  animation: splat-1 2s linear 1s both;
-}
-.dot2 {
-  position: absolute;
-  top: 20%;
-  right: 40%;
-  width: 10px;
-  height: 10px;
-  border-radius: 40%;
-  background: rgb(205, 164, 0);
-  z-index: 70;
-  animation: splat-2 2s linear 1s both;
-}
-.dot3 {
-  position: absolute;
-  top: 10%;
-  right: 30%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(4, 182, 226, 1);
-  z-index: 25;
-  animation: splat-3 2s linear 1s both;
-}
-.dot4 {
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--brightwhite);
-  z-index: 25;
-  animation: splat-4 1s linear 1s both;
-}
-.dot5 {
-  position: absolute;
-  top: 50%;
-  right: 70%;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: var(--deepblue);
-  z-index: 25;
-  animation: transit 1s linear 1s both;
-} */
 @media screen and (min-width: 700px) {
   .perspective-menu {
     z-index: 50;

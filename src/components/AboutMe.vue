@@ -19,7 +19,8 @@
     <div class="download">
       <a
         class="dl-res"
-        href="/Resume/Kel_Strother-Resume.pdf"
+        href="Resume/Kel_Strother-Resume.pdf"
+        target="_blank"
         download="Kel Strother Resume"
       >
         <p class="dl-my-res">Download My Resume</p>
@@ -90,6 +91,7 @@ export default {};
   width: 90vw;
   max-width: 500px;
   height: auto;
+  z-index: 2;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -123,6 +125,7 @@ a {
   display: flex;
   overflow: hidden;
   position: absolute;
+  z-index: 10;
   transform: rotate(-5deg);
   top: 60%;
   left: 26%;
